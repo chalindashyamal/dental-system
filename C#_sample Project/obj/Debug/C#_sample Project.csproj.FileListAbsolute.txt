@@ -1,0 +1,16 @@
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\bin\Debug\C#_sample Project.exe.config
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\bin\Debug\C#_sample Project.exe
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\bin\Debug\C#_sample Project.pdb
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.csproj.AssemblyReference.cache
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Home.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Login.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Properties.Resources.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.csproj.GenerateResource.cache
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.csproj.CoreCompileInputs.cache
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.exe
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.pdb
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Reset_Password_Via_Email.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Send_code.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Fogot_Method.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Verify_email_city.resources
