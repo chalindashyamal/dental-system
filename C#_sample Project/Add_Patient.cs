@@ -10,16 +10,22 @@ using System.Windows.Forms;
 
 namespace C__sample_Project
 {
-    public partial class Home : Form
+    public partial class Add_Patient : Form
     {
-        public Home()
+        public Add_Patient()
         {
             InitializeComponent();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void btnNewPatient_Click(object sender, EventArgs e)
         {
+          
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Home().Show();
+            this.Hide();
         }
     }
 }

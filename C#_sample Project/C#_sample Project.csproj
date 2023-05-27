@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin_Login.cs">
+    <Compile Include="Add_Patient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_Login.Designer.cs">
-      <DependentUpon>Admin_Login.cs</DependentUpon>
+    <Compile Include="Add_Patient.Designer.cs">
+      <DependentUpon>Add_Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Login.Designer.cs">
+      <DependentUpon>Admin Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctor_Login.cs">
       <SubType>Form</SubType>
@@ -64,22 +70,34 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="New Appointment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="New Appointment.Designer.cs">
+      <DependentUpon>New Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reception_Dashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception_Dashbord.Designer.cs">
+      <DependentUpon>Reception_Dashbord.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin_Login.resx">
-      <DependentUpon>Admin_Login.cs</DependentUpon>
+    <EmbeddedResource Include="Add_Patient.resx">
+      <DependentUpon>Add_Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Login.resx">
+      <DependentUpon>Admin Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_Login.resx">
       <DependentUpon>Doctor_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="New Appointment.resx">
+      <DependentUpon>New Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception_Dashbord.resx">
+      <DependentUpon>Reception_Dashbord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

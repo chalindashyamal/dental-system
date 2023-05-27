@@ -26,3 +26,5 @@ C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample 
 C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample Project.csproj.CoreCompileInputs.cache
 C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample Project.exe
 C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample Project.pdb
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Add_Patient.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.New_Appointment.resources
