@@ -10,7 +10,5 @@ C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\ob
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.csproj.CoreCompileInputs.cache
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.exe
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.pdb
-C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Reset_Password_Via_Email.resources
-C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Send_code.resources
-C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Fogot_Method.resources
-C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Verify_email_city.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Doctor_Login.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Admin_Login.resources

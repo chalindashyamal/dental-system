@@ -24,6 +24,18 @@ namespace C__sample_Project
                 new Home().Show();
                 this.Hide();
             }
+
+            else if (txtUserName.Text =="Tulina Guna"&& txtPassword.Text=="54321")
+            {
+                new Doctor_Login().Show();
+                this.Hide();
+            }
+            else if (txtUserName.Text == "Dulran" && txtPassword.Text == "11223")
+            {
+                new Admin_Login().Show();
+                this.Hide();
+            }
+
             else
             {
                 MessageBox.Show("The user name or password you entered is incrrect,try again");
@@ -50,9 +62,6 @@ namespace C__sample_Project
         private void button4_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Fogot_Method fogot_Method = new Fogot_Method();
-            fogot_Method.Show();
         }
     }
 }
