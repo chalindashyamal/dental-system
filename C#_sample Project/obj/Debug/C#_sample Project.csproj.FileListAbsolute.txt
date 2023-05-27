@@ -12,3 +12,17 @@ C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\ob
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.pdb
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Doctor_Login.resources
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Admin_Login.resources
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\bin\Debug\C#_sample Project.exe.config
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\bin\Debug\C#_sample Project.exe
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\bin\Debug\C#_sample Project.pdb
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample Project.csproj.AssemblyReference.cache
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C__sample_Project.Admin_Login.resources
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C__sample_Project.Doctor_Login.resources
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C__sample_Project.Home.resources
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C__sample_Project.Login.resources
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C__sample_Project.Properties.Resources.resources
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample Project.csproj.GenerateResource.cache
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample Project.csproj.CoreCompileInputs.cache
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample Project.exe
+C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample Project.pdb
