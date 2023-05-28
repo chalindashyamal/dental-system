@@ -28,3 +28,10 @@ C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample 
 C:\Users\mrtcg\Source\Repos\dental-system\C#_sample Project\obj\Debug\C#_sample Project.pdb
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Add_Patient.resources
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.New_Appointment.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.New_Payment.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.New_Receptionist.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Prescription.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Medical_History.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Payment_List.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Receptonist_List.resources
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Appointment_List.resources

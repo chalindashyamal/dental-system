@@ -58,6 +58,12 @@
     <Compile Include="Admin Login.Designer.cs">
       <DependentUpon>Admin Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Appointment_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment_List.Designer.cs">
+      <DependentUpon>Appointment_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +76,41 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Medical History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medical History.Designer.cs">
+      <DependentUpon>Medical History.cs</DependentUpon>
+    </Compile>
     <Compile Include="New Appointment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="New Appointment.Designer.cs">
       <DependentUpon>New Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New Payment.Designer.cs">
+      <DependentUpon>New Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New Receptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New Receptionist.Designer.cs">
+      <DependentUpon>New Receptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment List.Designer.cs">
+      <DependentUpon>Payment List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prescription.Designer.cs">
+      <DependentUpon>Prescription.cs</DependentUpon>
     </Compile>
     <Compile Include="Reception_Dashbord.cs">
       <SubType>Form</SubType>
@@ -84,23 +120,47 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receptonist_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receptonist_List.Designer.cs">
+      <DependentUpon>Receptonist_List.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add_Patient.resx">
       <DependentUpon>Add_Patient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Login.resx">
       <DependentUpon>Admin Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Appointment_List.resx">
+      <DependentUpon>Appointment_List.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctor_Login.resx">
       <DependentUpon>Doctor_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medical History.resx">
+      <DependentUpon>Medical History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="New Appointment.resx">
       <DependentUpon>New Appointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="New Payment.resx">
+      <DependentUpon>New Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New Receptionist.resx">
+      <DependentUpon>New Receptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment List.resx">
+      <DependentUpon>Payment List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prescription.resx">
+      <DependentUpon>Prescription.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reception_Dashbord.resx">
       <DependentUpon>Reception_Dashbord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +171,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Receptonist_List.resx">
+      <DependentUpon>Receptonist_List.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

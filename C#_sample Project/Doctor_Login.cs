@@ -21,5 +21,27 @@ namespace C__sample_Project
         {
 
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to exit?", "Exit message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnNewPatient_Click(object sender, EventArgs e)
+        {
+            Prescription prescription = new Prescription();
+            prescription.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+             Medical_History medical_History = new Medical_History();
+            medical_History.Show();
+            this.Hide();
+        }
     }
 }

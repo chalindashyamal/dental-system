@@ -17,20 +17,20 @@ namespace C__sample_Project
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text == "Chalinda Shyamal" && txtPassword.Text == "12345")
+            if (txtUserName.Text == "Reception" && txtPassword.Text == "123")
             {
                 new Home().Show();
                 this.Hide();
             }
 
-            else if (txtUserName.Text =="Tulina Guna"&& txtPassword.Text=="54321")
+            else if (txtUserName.Text == "Doctor" && txtPassword.Text == "543")
             {
                 new Doctor_Login().Show();
                 this.Hide();
             }
-            else if (txtUserName.Text == "Dulran" && txtPassword.Text == "11223")
+            else if (txtUserName.Text == "Admin" && txtPassword.Text == "134")
             {
                 new Admin_Login().Show();
                 this.Hide();
@@ -47,21 +47,10 @@ namespace C__sample_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txtPassword.Clear();
-            txtUserName.Clear();
-            txtUserName.Focus();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
+            if (MessageBox.Show("Are you sure you want to exit?", "Exit message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

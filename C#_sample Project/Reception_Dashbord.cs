@@ -43,5 +43,20 @@ namespace C__sample_Project
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure you want to exit?","Exit message",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            New_Payment new_Payment = new New_Payment();    
+            new_Payment.Show();
+            this.Hide();
+        }
     }
 }

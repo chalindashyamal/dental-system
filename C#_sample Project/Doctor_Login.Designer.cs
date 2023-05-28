@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Doctor_Login));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnNewPatient = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -47,72 +46,64 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Doctor";
             // 
-            // label2
+            // btnNewPatient
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(185, 209);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Patient ID";
+            this.btnNewPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewPatient.BackgroundImage")));
+            this.btnNewPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNewPatient.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewPatient.Location = new System.Drawing.Point(113, 44);
+            this.btnNewPatient.Name = "btnNewPatient";
+            this.btnNewPatient.Size = new System.Drawing.Size(192, 96);
+            this.btnNewPatient.TabIndex = 0;
+            this.btnNewPatient.UseVisualStyleBackColor = true;
+            this.btnNewPatient.Click += new System.EventHandler(this.btnNewPatient_Click);
             // 
-            // label3
+            // btnLogout
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(185, 268);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 29);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Prescription";
+            this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(113, 452);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(192, 96);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(188, 136);
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(113, 312);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(256, 46);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Patient Medical History";
+            this.button1.Size = new System.Drawing.Size(192, 96);
+            this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // button7
             // 
-            this.textBox1.Location = new System.Drawing.Point(370, 215);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 22);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(370, 268);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(410, 203);
-            this.textBox2.TabIndex = 5;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(618, 510);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 43);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Enter";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(113, 178);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(192, 96);
+            this.button7.TabIndex = 0;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Doctor_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 577);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1066, 623);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnNewPatient);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.label1);
             this.Name = "Doctor_Login";
             this.Text = "Doctor_Login";
@@ -124,11 +115,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnNewPatient;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button7;
     }
 }
