@@ -34,20 +34,19 @@ namespace C__sample_Project
         {
             Prescription prescription = new Prescription();
             prescription.Show();
-            this.Hide();
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
              Medical_History medical_History = new Medical_History();
             medical_History.Show();
-            this.Hide();
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             Payment_List payment_List = new Payment_List();
-            this.Hide();
             payment_List.Show();
         }
     }

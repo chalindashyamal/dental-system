@@ -107,6 +107,7 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label1);
             this.Name = "Doctor_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doctor_Login";
             this.ResumeLayout(false);
             this.PerformLayout();

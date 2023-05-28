@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Appointment_List));
             this.lable1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lable1
@@ -43,16 +42,6 @@
             this.lable1.TabIndex = 38;
             this.lable1.Text = "Appointment List";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(805, 518);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 46);
-            this.button3.TabIndex = 56;
-            this.button3.Text = "Back";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Appointment_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -60,9 +49,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 576);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.lable1);
             this.Name = "Appointment_List";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appointment_List";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -72,6 +61,5 @@
         #endregion
 
         private System.Windows.Forms.Label lable1;
-        private System.Windows.Forms.Button button3;
     }
 }

@@ -38,7 +38,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.lable1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.btnNewPatient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -130,16 +129,6 @@
             this.button4.Text = "Save";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(370, 518);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(90, 46);
-            this.button5.TabIndex = 56;
-            this.button5.Text = "Back";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // btnNewPatient
             // 
             this.btnNewPatient.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,7 +147,6 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(907, 576);
             this.Controls.Add(this.btnNewPatient);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.lable1);
             this.Controls.Add(this.textBox4);
@@ -170,6 +158,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Prescription";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Prescription";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,7 +176,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label lable1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnNewPatient;
     }
 }

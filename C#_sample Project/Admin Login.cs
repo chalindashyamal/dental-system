@@ -21,7 +21,7 @@ namespace C__sample_Project
         {
             New_Receptionist new_Receptionist = new New_Receptionist();
             new_Receptionist.Show();
-            this.Hide();
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -35,7 +35,6 @@ namespace C__sample_Project
         private void button6_Click(object sender, EventArgs e)
         {
             Add_Patient add_Patient = new Add_Patient();
-            this.Hide();
             add_Patient.Show();
         }
 
@@ -43,28 +42,26 @@ namespace C__sample_Project
         {
             Payment_List payment_List = new Payment_List();
             payment_List.Show();
-            this.Hide();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Appointment_List appointment_List = new Appointment_List();
-            this.Hide();
             appointment_List.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Prescription prescription   = new Prescription();
-            prescription.Show();
-            this.Hide();
+            Medical_History medical_History = new Medical_History();
+            medical_History.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Receptonist_List receptonist_list = new Receptonist_List();
             receptonist_list.Show();
-            this.Hide();
+           
         }
     }
 }

@@ -29,7 +29,7 @@ namespace C__sample_Project
         {
             Medical_History medical_History = new Medical_History();
             medical_History.Show();
-            this.Hide();
+            
         }
     }
 }

@@ -29,18 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Receptonist_List));
-            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(805, 518);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(90, 46);
-            this.button5.TabIndex = 59;
-            this.button5.Text = "Back";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Receptonist_List
             // 
@@ -49,15 +38,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 576);
-            this.Controls.Add(this.button5);
             this.Name = "Receptonist_List";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receptonist_List";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button5;
     }
 }

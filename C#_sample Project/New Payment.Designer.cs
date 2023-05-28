@@ -40,7 +40,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.lable1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -139,16 +138,6 @@
             this.lable1.TabIndex = 48;
             this.lable1.Text = "New Payment";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(401, 414);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 46);
-            this.button3.TabIndex = 59;
-            this.button3.Text = "Back";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(221, 414);
@@ -166,7 +155,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 576);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lable1);
             this.Controls.Add(this.textBox5);
@@ -180,6 +168,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
             this.Name = "New_Payment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Payment";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,7 +187,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label lable1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
     }
 }

@@ -26,8 +26,7 @@ namespace C__sample_Project
         {
             Add_Patient add_Patient = new Add_Patient();    
             add_Patient.Show();
-            this.Hide();
-            
+                    
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -35,7 +34,7 @@ namespace C__sample_Project
 
             New_Appointment new_Appointment = new New_Appointment();
             new_Appointment.Show();
-            this.Hide();
+            
 
         }
 
@@ -56,7 +55,7 @@ namespace C__sample_Project
         {
             New_Payment new_Payment = new New_Payment();    
             new_Payment.Show();
-            this.Hide();
+            
         }
     }
 }

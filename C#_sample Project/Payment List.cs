@@ -19,9 +19,8 @@ namespace C__sample_Project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Admin_Login admin_Login = new Admin_Login();    
-            admin_Login.Show();
-            this.Hide();
+            Payment_List payment_List = new Payment_List();
+            payment_List.Show();
         }
     }
 }

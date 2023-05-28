@@ -36,10 +36,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lable1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // textBox2
@@ -106,16 +105,6 @@
             this.lable1.TabIndex = 37;
             this.lable1.Text = "New Patient_Appointment";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(514, 309);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 46);
-            this.button3.TabIndex = 55;
-            this.button3.Text = "Back";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(334, 309);
@@ -125,19 +114,23 @@
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // dateTimePicker1
             // 
-            this.textBox4.Location = new System.Drawing.Point(334, 239);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(270, 22);
-            this.textBox4.TabIndex = 47;
+            this.dateTimePicker1.CustomFormat = "DD-MM-YYYY";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(334, 198);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(145, 22);
+            this.dateTimePicker1.TabIndex = 55;
             // 
-            // textBox3
+            // dateTimePicker2
             // 
-            this.textBox3.Location = new System.Drawing.Point(334, 198);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(270, 22);
-            this.textBox3.TabIndex = 46;
+            this.dateTimePicker2.CustomFormat = "HH-MM";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(334, 237);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(145, 22);
+            this.dateTimePicker2.TabIndex = 56;
             // 
             // New_Appointment
             // 
@@ -147,10 +140,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 576);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label6);
@@ -159,6 +151,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lable1);
             this.Name = "New_Appointment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New_Appointment";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,9 +166,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lable1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

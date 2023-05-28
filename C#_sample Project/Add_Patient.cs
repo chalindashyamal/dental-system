@@ -24,8 +24,10 @@ namespace C__sample_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new Home().Show();
+            Admin_Login admin_Login = new Admin_Login();
+            admin_Login.Show();
             this.Hide();
+
         }
     }
 }

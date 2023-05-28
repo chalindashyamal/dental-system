@@ -38,7 +38,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,12 +47,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lable1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(318, 497);
+            this.button1.Location = new System.Drawing.Point(318, 505);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 46);
             this.button1.TabIndex = 24;
@@ -84,7 +83,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(318, 403);
+            this.textBox8.Location = new System.Drawing.Point(318, 459);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(241, 22);
             this.textBox8.TabIndex = 39;
@@ -92,15 +91,16 @@
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(318, 361);
+            this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(241, 22);
+            this.textBox9.Size = new System.Drawing.Size(241, 64);
             this.textBox9.TabIndex = 38;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(74, 405);
+            this.label8.Location = new System.Drawing.Point(74, 461);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(214, 20);
             this.label8.TabIndex = 36;
@@ -129,13 +129,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(241, 22);
             this.textBox5.TabIndex = 33;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(318, 183);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(241, 22);
-            this.textBox3.TabIndex = 32;
             // 
             // textBox2
             // 
@@ -221,16 +214,14 @@
             this.lable1.TabIndex = 22;
             this.lable1.Text = "New Patient";
             // 
-            // button3
+            // dateTimePicker1
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(469, 497);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 46);
-            this.button3.TabIndex = 43;
-            this.button3.Text = "Back";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.dateTimePicker1.CustomFormat = "DD-MM-YYYY";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(318, 181);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(139, 22);
+            this.dateTimePicker1.TabIndex = 43;
             // 
             // Add_Patient
             // 
@@ -240,7 +231,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 576);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -250,7 +241,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label6);
@@ -261,6 +251,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lable1);
             this.Name = "Add_Patient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Patient";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -277,7 +268,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
@@ -287,6 +277,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lable1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
