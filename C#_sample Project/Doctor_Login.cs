@@ -43,5 +43,12 @@ namespace C__sample_Project
             medical_History.Show();
             this.Hide();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Payment_List payment_List = new Payment_List();
+            this.Hide();
+            payment_List.Show();
+        }
     }
 }

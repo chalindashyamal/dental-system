@@ -21,7 +21,7 @@ namespace C__sample_Project
         {
             Admin_Login admin = new Admin_Login();
             this.Hide();
-            admin.Show();   
+            admin.Show();
         }
     }
 }

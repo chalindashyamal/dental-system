@@ -19,8 +19,8 @@ namespace C__sample_Project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Doctor_Login doctor_Login = new Doctor_Login();
-            doctor_Login.Show();
+            Prescription prescription = new Prescription();
+            prescription.Show();
             this.Hide();
         }
 

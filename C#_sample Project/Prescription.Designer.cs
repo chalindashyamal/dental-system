@@ -117,9 +117,9 @@
             this.lable1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lable1.Location = new System.Drawing.Point(34, 31);
             this.lable1.Name = "lable1";
-            this.lable1.Size = new System.Drawing.Size(217, 22);
+            this.lable1.Size = new System.Drawing.Size(146, 22);
             this.lable1.TabIndex = 45;
-            this.lable1.Text = "New Patient_Appointment";
+            this.lable1.Text = "New Prescription";
             // 
             // button4
             // 
