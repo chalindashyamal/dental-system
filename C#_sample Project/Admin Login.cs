@@ -63,5 +63,17 @@ namespace C__sample_Project
             receptonist_list.Show();
            
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Patient_List patient_List = new Patient_List();
+            patient_List.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Edit_Profile edit_Profile = new Edit_Profile();
+            edit_Profile.Show();
+        }
     }
 }
