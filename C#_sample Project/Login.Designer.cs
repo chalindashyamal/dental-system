@@ -39,6 +39,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.label2 = new System.Windows.Forms.Label();
+            this.ShowPassWordLogin = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,9 +84,9 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(217, 306);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(267, 30);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // button1
             // 
@@ -96,6 +97,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Forgot Password";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -131,12 +133,25 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "User Name";
             // 
+            // ShowPassWordLogin
+            // 
+            this.ShowPassWordLogin.AutoSize = true;
+            this.ShowPassWordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowPassWordLogin.Location = new System.Drawing.Point(217, 366);
+            this.ShowPassWordLogin.Name = "ShowPassWordLogin";
+            this.ShowPassWordLogin.Size = new System.Drawing.Size(125, 20);
+            this.ShowPassWordLogin.TabIndex = 9;
+            this.ShowPassWordLogin.Text = "Show Password";
+            this.ShowPassWordLogin.UseVisualStyleBackColor = true;
+            this.ShowPassWordLogin.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(586, 541);
+            this.Controls.Add(this.ShowPassWordLogin);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -166,5 +181,6 @@
         private System.Windows.Forms.Button button3;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox ShowPassWordLogin;
     }
 }

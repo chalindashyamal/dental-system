@@ -214,5 +214,41 @@ namespace C__sample_Project
                 MessageBox.Show("Passwords do not match");
             }
         }
+
+        private void ShowPasswordA_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPasswordA.Checked == true)
+            {
+                txtApassword2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtApassword2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void ShowPasswordD_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPasswordD.Checked == true)
+            {
+                txtDpassword2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtDpassword2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void ShowPasswordR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPasswordR.Checked == true)
+            {
+                txtRpassword2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtRpassword2.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

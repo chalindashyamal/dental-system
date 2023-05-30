@@ -33,5 +33,10 @@ namespace C__sample_Project
         {
             Application.Exit();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

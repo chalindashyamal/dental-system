@@ -41,6 +41,7 @@
             this.lable1.Size = new System.Drawing.Size(143, 22);
             this.lable1.TabIndex = 38;
             this.lable1.Text = "Appointment List";
+            this.lable1.Click += new System.EventHandler(this.lable1_Click);
             // 
             // Appointment_List
             // 
@@ -48,7 +49,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(907, 576);
+            this.ClientSize = new System.Drawing.Size(1180, 576);
             this.Controls.Add(this.lable1);
             this.Name = "Appointment_List";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

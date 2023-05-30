@@ -128,7 +128,7 @@
             this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(862, 515);
+            this.button7.Location = new System.Drawing.Point(688, 442);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(192, 96);
             this.button7.TabIndex = 20;
@@ -137,9 +137,9 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(186, 449);
+            this.button8.Location = new System.Drawing.Point(186, 442);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(128, 52);
+            this.button8.Size = new System.Drawing.Size(192, 96);
             this.button8.TabIndex = 21;
             this.button8.Text = "Patient List";
             this.button8.UseVisualStyleBackColor = true;
@@ -147,9 +147,9 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(435, 449);
+            this.button9.Location = new System.Drawing.Point(435, 442);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(128, 52);
+            this.button9.Size = new System.Drawing.Size(192, 96);
             this.button9.TabIndex = 22;
             this.button9.Text = "Edit Password";
             this.button9.UseVisualStyleBackColor = true;

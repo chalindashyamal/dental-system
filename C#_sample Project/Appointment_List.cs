@@ -23,5 +23,10 @@ namespace C__sample_Project
             admin.Show();
             this.Hide();
         }
+
+        private void lable1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
