@@ -38,5 +38,10 @@ namespace C__sample_Project
         {
 
         }
+
+        private void New_Appointment_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

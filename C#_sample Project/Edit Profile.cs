@@ -250,5 +250,10 @@ namespace C__sample_Project
                 txtRpassword2.UseSystemPasswordChar = true;
             }
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

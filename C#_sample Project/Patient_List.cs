@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace C__sample_Project
@@ -54,6 +55,68 @@ namespace C__sample_Project
         private void Patient_List_Load(object sender, EventArgs e)
         {
             loadData();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Add filter to dataGridView1 to show entries match the ID
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dataGridView1.DataSource;
+                bs.Filter = "patient_id = " + textBox1.Text;
+                dataGridView1.DataSource = bs;
+
+                // Clear the text box
+                textBox1.Text = "";
+            }
+            catch 
+            {
+                MessageBox.Show("Not found try again!");
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Add filter to dataGridView1 to show entries match the First name or the Last name
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dataGridView1.DataSource;
+                bs.Filter = "Patient_Name LIKE '%" + textBox2.Text + "%'";
+                dataGridView1.DataSource = bs;
+
+                // Clear the text box
+                textBox2.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Not found try again!");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                // Add filter to dataGridView1 to show entries match the phone_number
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dataGridView1.DataSource;
+                bs.Filter = "Contact_Number like '%" + textBox3.Text + "%'";
+                dataGridView1.DataSource = bs;
+
+                // Clear the text box
+                textBox3.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Not found try again!");
+            }
         }
     }
 }

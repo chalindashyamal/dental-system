@@ -49,10 +49,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.ShowPasswordA = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.ShowPasswordD = new System.Windows.Forms.CheckBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ShowPasswordR = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -161,7 +163,7 @@
             // 
             // txtRpassword2
             // 
-            this.txtRpassword2.Location = new System.Drawing.Point(55, 278);
+            this.txtRpassword2.Location = new System.Drawing.Point(55, 386);
             this.txtRpassword2.Name = "txtRpassword2";
             this.txtRpassword2.Size = new System.Drawing.Size(205, 22);
             this.txtRpassword2.TabIndex = 14;
@@ -169,7 +171,7 @@
             // 
             // txtRpassword1
             // 
-            this.txtRpassword1.Location = new System.Drawing.Point(55, 167);
+            this.txtRpassword1.Location = new System.Drawing.Point(55, 275);
             this.txtRpassword1.Name = "txtRpassword1";
             this.txtRpassword1.Size = new System.Drawing.Size(205, 22);
             this.txtRpassword1.TabIndex = 13;
@@ -178,7 +180,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(50, 232);
+            this.label8.Location = new System.Drawing.Point(50, 340);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(210, 29);
             this.label8.TabIndex = 12;
@@ -188,7 +190,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(50, 124);
+            this.label9.Location = new System.Drawing.Point(50, 232);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(176, 29);
             this.label9.TabIndex = 11;
@@ -219,7 +221,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(55, 356);
+            this.button3.Location = new System.Drawing.Point(55, 454);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 33);
             this.button3.TabIndex = 17;
@@ -251,6 +253,18 @@
             this.panel1.Size = new System.Drawing.Size(298, 544);
             this.panel1.TabIndex = 19;
             // 
+            // ShowPasswordA
+            // 
+            this.ShowPasswordA.AutoSize = true;
+            this.ShowPasswordA.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowPasswordA.Location = new System.Drawing.Point(46, 307);
+            this.ShowPasswordA.Name = "ShowPasswordA";
+            this.ShowPasswordA.Size = new System.Drawing.Size(125, 20);
+            this.ShowPasswordA.TabIndex = 16;
+            this.ShowPasswordA.Text = "Show Password";
+            this.ShowPasswordA.UseVisualStyleBackColor = true;
+            this.ShowPasswordA.CheckedChanged += new System.EventHandler(this.ShowPasswordA_CheckedChanged);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.ShowPasswordD);
@@ -265,32 +279,6 @@
             this.panel2.Size = new System.Drawing.Size(298, 544);
             this.panel2.TabIndex = 20;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.ShowPasswordR);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.txtRpassword1);
-            this.panel3.Controls.Add(this.txtRpassword2);
-            this.panel3.Location = new System.Drawing.Point(774, 80);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(298, 544);
-            this.panel3.TabIndex = 21;
-            // 
-            // ShowPasswordA
-            // 
-            this.ShowPasswordA.AutoSize = true;
-            this.ShowPasswordA.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowPasswordA.Location = new System.Drawing.Point(46, 307);
-            this.ShowPasswordA.Name = "ShowPasswordA";
-            this.ShowPasswordA.Size = new System.Drawing.Size(125, 20);
-            this.ShowPasswordA.TabIndex = 16;
-            this.ShowPasswordA.Text = "Show Password";
-            this.ShowPasswordA.UseVisualStyleBackColor = true;
-            this.ShowPasswordA.CheckedChanged += new System.EventHandler(this.ShowPasswordA_CheckedChanged);
-            // 
             // ShowPasswordD
             // 
             this.ShowPasswordD.AutoSize = true;
@@ -303,11 +291,45 @@
             this.ShowPasswordD.UseVisualStyleBackColor = true;
             this.ShowPasswordD.CheckedChanged += new System.EventHandler(this.ShowPasswordD_CheckedChanged);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.ShowPasswordR);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.txtRpassword1);
+            this.panel3.Controls.Add(this.txtRpassword2);
+            this.panel3.Location = new System.Drawing.Point(774, 80);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(298, 544);
+            this.panel3.TabIndex = 21;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(50, 124);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(198, 29);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Select Username";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(55, 165);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(205, 24);
+            this.comboBox1.TabIndex = 18;
+            // 
             // ShowPasswordR
             // 
             this.ShowPasswordR.AutoSize = true;
             this.ShowPasswordR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowPasswordR.Location = new System.Drawing.Point(55, 307);
+            this.ShowPasswordR.Location = new System.Drawing.Point(55, 415);
             this.ShowPasswordR.Name = "ShowPasswordR";
             this.ShowPasswordR.Size = new System.Drawing.Size(125, 20);
             this.ShowPasswordR.TabIndex = 18;
@@ -328,6 +350,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.Name = "Edit_Profile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Password";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -367,5 +390,7 @@
         private System.Windows.Forms.CheckBox ShowPasswordA;
         private System.Windows.Forms.CheckBox ShowPasswordD;
         private System.Windows.Forms.CheckBox ShowPasswordR;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
