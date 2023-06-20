@@ -29,62 +29,60 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_Receptionist));
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.radiobtnRFemale = new System.Windows.Forms.RadioButton();
+            this.radiobtnRMale = new System.Windows.Forms.RadioButton();
+            this.txtREmergencyCP = new System.Windows.Forms.TextBox();
+            this.txtRAddress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRContact = new System.Windows.Forms.TextBox();
+            this.txtREmail = new System.Windows.Forms.TextBox();
+            this.txtRname = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lable1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // radioButton2
+            // radiobtnRFemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(427, 207);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(74, 20);
-            this.radioButton2.TabIndex = 61;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radiobtnRFemale.AutoSize = true;
+            this.radiobtnRFemale.Location = new System.Drawing.Point(427, 207);
+            this.radiobtnRFemale.Name = "radiobtnRFemale";
+            this.radiobtnRFemale.Size = new System.Drawing.Size(74, 20);
+            this.radiobtnRFemale.TabIndex = 61;
+            this.radiobtnRFemale.TabStop = true;
+            this.radiobtnRFemale.Text = "Female";
+            this.radiobtnRFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radiobtnRMale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(289, 207);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 20);
-            this.radioButton1.TabIndex = 60;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radiobtnRMale.AutoSize = true;
+            this.radiobtnRMale.Location = new System.Drawing.Point(289, 207);
+            this.radiobtnRMale.Name = "radiobtnRMale";
+            this.radiobtnRMale.Size = new System.Drawing.Size(58, 20);
+            this.radiobtnRMale.TabIndex = 60;
+            this.radiobtnRMale.TabStop = true;
+            this.radiobtnRMale.Text = "Male";
+            this.radiobtnRMale.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // txtREmergencyCP
             // 
-            this.textBox8.Location = new System.Drawing.Point(289, 385);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(241, 22);
-            this.textBox8.TabIndex = 59;
+            this.txtREmergencyCP.Location = new System.Drawing.Point(289, 385);
+            this.txtREmergencyCP.Name = "txtREmergencyCP";
+            this.txtREmergencyCP.Size = new System.Drawing.Size(241, 22);
+            this.txtREmergencyCP.TabIndex = 59;
             // 
-            // textBox9
+            // txtRAddress
             // 
-            this.textBox9.Location = new System.Drawing.Point(289, 343);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(241, 22);
-            this.textBox9.TabIndex = 58;
+            this.txtRAddress.Location = new System.Drawing.Point(289, 343);
+            this.txtRAddress.Name = "txtRAddress";
+            this.txtRAddress.Size = new System.Drawing.Size(241, 22);
+            this.txtRAddress.TabIndex = 58;
             // 
             // label8
             // 
@@ -106,33 +104,26 @@
             this.label9.TabIndex = 56;
             this.label9.Text = "Address";
             // 
-            // textBox6
+            // txtRContact
             // 
-            this.textBox6.Location = new System.Drawing.Point(289, 298);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(241, 22);
-            this.textBox6.TabIndex = 55;
+            this.txtRContact.Location = new System.Drawing.Point(289, 298);
+            this.txtRContact.Name = "txtRContact";
+            this.txtRContact.Size = new System.Drawing.Size(241, 22);
+            this.txtRContact.TabIndex = 55;
             // 
-            // textBox5
+            // txtREmail
             // 
-            this.textBox5.Location = new System.Drawing.Point(289, 250);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(241, 22);
-            this.textBox5.TabIndex = 54;
+            this.txtREmail.Location = new System.Drawing.Point(289, 250);
+            this.txtREmail.Name = "txtREmail";
+            this.txtREmail.Size = new System.Drawing.Size(241, 22);
+            this.txtREmail.TabIndex = 54;
             // 
-            // textBox2
+            // txtRname
             // 
-            this.textBox2.Location = new System.Drawing.Point(289, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(241, 22);
-            this.textBox2.TabIndex = 52;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(289, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 22);
-            this.textBox1.TabIndex = 51;
+            this.txtRname.Location = new System.Drawing.Point(289, 121);
+            this.txtRname.Name = "txtRname";
+            this.txtRname.Size = new System.Drawing.Size(241, 22);
+            this.txtRname.TabIndex = 52;
             // 
             // label6
             // 
@@ -184,16 +175,6 @@
             this.label2.TabIndex = 46;
             this.label2.Text = "Receptionist Name";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Receptionist Id";
-            // 
             // lable1
             // 
             this.lable1.AutoSize = true;
@@ -213,6 +194,7 @@
             this.button1.TabIndex = 45;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
@@ -232,22 +214,20 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lable1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.radiobtnRFemale);
+            this.Controls.Add(this.radiobtnRMale);
+            this.Controls.Add(this.txtREmergencyCP);
+            this.Controls.Add(this.txtRAddress);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRContact);
+            this.Controls.Add(this.txtREmail);
+            this.Controls.Add(this.txtRname);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "New_Receptionist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New_Receptionist";
@@ -257,22 +237,20 @@
         }
 
         #endregion
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.RadioButton radiobtnRFemale;
+        private System.Windows.Forms.RadioButton radiobtnRMale;
+        private System.Windows.Forms.TextBox txtREmergencyCP;
+        private System.Windows.Forms.TextBox txtRAddress;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRContact;
+        private System.Windows.Forms.TextBox txtREmail;
+        private System.Windows.Forms.TextBox txtRname;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lable1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

@@ -118,5 +118,46 @@ namespace C__sample_Project
                 MessageBox.Show("Not found try again!");
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            // Save changes in dataGridView1 to the database
+
+
+
+            // Show a message box to confirm the changes
+            MessageBox.Show("Changes Saved");
+
+            // Reset the dataGridView1 filters
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = "";
+            dataGridView1.DataSource = bs;
+
+            // Clear the text boxes
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Reset the dataGridView1 filters
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = "";
+            dataGridView1.DataSource = bs;
+
+            // Clear the text boxes
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

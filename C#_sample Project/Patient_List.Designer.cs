@@ -53,6 +53,7 @@
             this.button5.TabIndex = 76;
             this.button5.Text = "Save Changes";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -63,6 +64,7 @@
             this.button4.TabIndex = 75;
             this.button4.Text = "Reset";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -162,6 +164,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1156, 312);
             this.dataGridView1.TabIndex = 65;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // Patient_List
             // 
