@@ -91,9 +91,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(143, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 38;
-            this.label1.Text = "Patient Name";
+            this.label1.Text = "Patient ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lable1
             // 

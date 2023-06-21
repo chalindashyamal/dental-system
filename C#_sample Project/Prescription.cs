@@ -31,5 +31,10 @@ namespace C__sample_Project
             medical_History.Show();
             
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

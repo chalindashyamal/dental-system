@@ -36,10 +36,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.lable1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.btnNewPatient = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // textBox1
@@ -104,13 +104,6 @@
             this.textBox5.Size = new System.Drawing.Size(241, 22);
             this.textBox5.TabIndex = 43;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(219, 159);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(241, 22);
-            this.textBox4.TabIndex = 44;
-            // 
             // lable1
             // 
             this.lable1.AutoSize = true;
@@ -141,6 +134,15 @@
             this.btnNewPatient.UseVisualStyleBackColor = true;
             this.btnNewPatient.Click += new System.EventHandler(this.btnNewPatient_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(219, 159);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(241, 22);
+            this.dateTimePicker1.TabIndex = 58;
+            this.dateTimePicker1.Value = new System.DateTime(2023, 6, 21, 16, 55, 49, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // Prescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -149,10 +151,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 576);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnNewPatient);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.lable1);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -176,9 +178,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label lable1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnNewPatient;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
