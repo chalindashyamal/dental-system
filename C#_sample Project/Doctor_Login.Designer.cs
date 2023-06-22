@@ -29,43 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Doctor_Login));
-            this.label1 = new System.Windows.Forms.Label();
             this.btnNewPatient = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Doctor";
             // 
             // btnNewPatient
             // 
             this.btnNewPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewPatient.BackgroundImage")));
             this.btnNewPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNewPatient.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewPatient.Location = new System.Drawing.Point(113, 44);
+            this.btnNewPatient.Location = new System.Drawing.Point(12, 93);
             this.btnNewPatient.Name = "btnNewPatient";
-            this.btnNewPatient.Size = new System.Drawing.Size(192, 96);
+            this.btnNewPatient.Size = new System.Drawing.Size(141, 74);
             this.btnNewPatient.TabIndex = 0;
             this.btnNewPatient.UseVisualStyleBackColor = true;
             this.btnNewPatient.Click += new System.EventHandler(this.btnNewPatient_Click);
@@ -75,9 +66,9 @@
             this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(113, 452);
+            this.btnLogout.Location = new System.Drawing.Point(12, 462);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(192, 96);
+            this.btnLogout.Size = new System.Drawing.Size(141, 74);
             this.btnLogout.TabIndex = 0;
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -87,9 +78,9 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(113, 312);
+            this.button1.Location = new System.Drawing.Point(12, 337);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 96);
+            this.button1.Size = new System.Drawing.Size(141, 74);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -99,9 +90,9 @@
             this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(113, 178);
+            this.button7.Location = new System.Drawing.Point(12, 214);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(192, 96);
+            this.button7.Size = new System.Drawing.Size(141, 74);
             this.button7.TabIndex = 0;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -124,14 +115,6 @@
             this.panel1.Size = new System.Drawing.Size(245, 170);
             this.panel1.TabIndex = 2;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(776, 104);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(245, 170);
-            this.panel2.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -142,13 +125,13 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "label3";
             // 
-            // panel3
+            // panel2
             // 
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(472, 312);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(245, 170);
-            this.panel3.TabIndex = 3;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(776, 104);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(245, 170);
+            this.panel2.TabIndex = 3;
             // 
             // label4
             // 
@@ -160,13 +143,13 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "label4";
             // 
-            // panel4
+            // panel3
             // 
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(776, 312);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(245, 170);
-            this.panel4.TabIndex = 3;
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(472, 312);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(245, 170);
+            this.panel3.TabIndex = 3;
             // 
             // label5
             // 
@@ -178,6 +161,24 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "label5";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Location = new System.Drawing.Point(776, 312);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(245, 170);
+            this.panel4.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(249, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
+            // 
             // Doctor_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,6 +186,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1066, 623);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -193,7 +195,6 @@
             this.Controls.Add(this.btnNewPatient);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.label1);
             this.Name = "Doctor_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doctor_Login";
@@ -205,25 +206,24 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnNewPatient;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -36,10 +36,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.lable1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.btnNewPatient = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -104,33 +105,25 @@
             this.textBox5.Size = new System.Drawing.Size(241, 22);
             this.textBox5.TabIndex = 43;
             // 
-            // lable1
-            // 
-            this.lable1.AutoSize = true;
-            this.lable1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable1.Location = new System.Drawing.Point(34, 31);
-            this.lable1.Name = "lable1";
-            this.lable1.Size = new System.Drawing.Size(146, 22);
-            this.lable1.TabIndex = 45;
-            this.lable1.Text = "New Prescription";
-            // 
             // button4
             // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Location = new System.Drawing.Point(219, 518);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(90, 46);
+            this.button4.Size = new System.Drawing.Size(128, 46);
             this.button4.TabIndex = 55;
-            this.button4.Text = "Save";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // btnNewPatient
             // 
+            this.btnNewPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewPatient.BackgroundImage")));
+            this.btnNewPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNewPatient.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewPatient.Location = new System.Drawing.Point(633, 13);
             this.btnNewPatient.Name = "btnNewPatient";
             this.btnNewPatient.Size = new System.Drawing.Size(262, 54);
             this.btnNewPatient.TabIndex = 57;
-            this.btnNewPatient.Text = "Medical History";
             this.btnNewPatient.UseVisualStyleBackColor = true;
             this.btnNewPatient.Click += new System.EventHandler(this.btnNewPatient_Click);
             // 
@@ -143,6 +136,16 @@
             this.dateTimePicker1.Value = new System.DateTime(2023, 6, 21, 16, 55, 49, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(249, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 59;
+            this.pictureBox1.TabStop = false;
+            // 
             // Prescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -151,10 +154,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 576);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnNewPatient);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.lable1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -165,6 +168,7 @@
             this.Name = "Prescription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Prescription";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,9 +182,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label lable1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnNewPatient;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
