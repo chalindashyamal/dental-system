@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Xml.Linq;
-using MySql.Data.MySqlClient;
 
 namespace C__sample_Project
 {
@@ -23,7 +14,7 @@ namespace C__sample_Project
 
         private void btnNewPatient_Click(object sender, EventArgs e)
         {
-          
+            // Additional button click logic
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -31,61 +22,54 @@ namespace C__sample_Project
             Admin_Login admin_Login = new Admin_Login();
             admin_Login.Show();
             this.Hide();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-             string pname = txtPname.Text;
-             string address = txtAddress.Text;
-             string email = txtEmail.Text;
+            string pname = txtPname.Text;
+            string address = txtAddress.Text;
+            string email = txtEmail.Text;
 
-             //numeric
-             string stringContact = txtContact.Text;
-             string stringEmergency = txtEmergencyCP.Text;
-             
+            // Numeric
+            string stringContact = txtContact.Text;
+            string stringEmergency = txtEmergencyCP.Text;
 
-             //radio input
-             string gender = "";
+            // Radio input
+            string gender = "";
 
-             if (radiobtnMale.Checked)
-             {
-                 gender = "Male";
-             }
-             else if (radiobtnFemale.Checked)
-             {
+            if (radiobtnMale.Checked)
+            {
+                gender = "Male";
+            }
+            else if (radiobtnFemale.Checked)
+            {
                 gender = "Female";
-             }
+            }
 
-             //DOB
+            // DOB
             DateTime selectedDate = dateTimePicker1.Value;
             string date = selectedDate.ToString("yyyy-MM-dd");
 
-           
-
-
             DB_conection Objfunction = new DB_conection();
-            if(pname == ""|| address=="" || email=="" || stringContact=="" || stringEmergency=="" || gender=="" || selectedDate == new DateTime(2023, 5, 29))
+
+            if (pname == "" || address == "" || email == "" || stringContact == "" || stringEmergency == "" || gender == "" || selectedDate == new DateTime(2023, 5, 29))
             {
                 MessageBox.Show("All fields must be entered");
             }
-
             else if (!Objfunction.IsNumeric(stringContact) || !Objfunction.IsNumeric(stringEmergency))
             {
                 MessageBox.Show("Contact and Emergency contact should be numeric values");
             }
-
             else
             {
-                //numeric contact and Econtact
-
+                // Numeric contact and Econtact
                 int Contact = int.Parse(stringContact);
                 int Econtact = int.Parse(stringEmergency);
 
 
-                using (MySqlConnection connection = new MySqlConnection(Objfunction.connectionString))
+                using (SqlConnection connection = new SqlConnection(Objfunction.connectionString))
                 {
-                    using (MySqlCommand command = connection.CreateCommand())
+                    using (SqlCommand command = connection.CreateCommand())
                     {
                         try
                         {
@@ -93,7 +77,7 @@ namespace C__sample_Project
                             connection.Open();
 
                             // Set the command text and parameters
-                            command.CommandText = "INSERT INTO patienttable (Patient_Name, DOB, Gender, Email, Contact_Number, Address, Emergency_Contact) VALUES (@pname, @DOB, @gender, @Email, @ContactNumber, @Address, @Econtact)";
+                            command.CommandText = "INSERT INTO patienttable (patient_name, dob, gender, email, contact_number, emergency_contact, address) VALUES (@pname, @DOB, @gender, @Email, @ContactNumber, @Econtact, @Address)";
                             command.Parameters.AddWithValue("@pname", pname);
                             command.Parameters.AddWithValue("@DOB", date);
                             command.Parameters.AddWithValue("@gender", gender);
@@ -101,7 +85,6 @@ namespace C__sample_Project
                             command.Parameters.AddWithValue("@ContactNumber", Contact);
                             command.Parameters.AddWithValue("@Address", address);
                             command.Parameters.AddWithValue("@Econtact", Econtact);
-                            
 
                             // Execute the command
                             int rowsAffected = command.ExecuteNonQuery();
@@ -114,9 +97,8 @@ namespace C__sample_Project
                             else
                             {
                                 // No rows affected
-                                MessageBox.Show("Patient added Failed!");
+                                MessageBox.Show("Patient added failed!");
                             }
-
                         }
                         catch (Exception ex)
                         {
@@ -131,9 +113,6 @@ namespace C__sample_Project
                             radiobtnFemale.Checked = false;
                             txtContact.Text = "";
                             txtEmergencyCP.Text = "";
-                            
-                            
-
                         }
                     }
                 }
@@ -142,12 +121,12 @@ namespace C__sample_Project
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            // Additional text box changed logic
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            // Additional radio button changed logic
         }
     }
 }

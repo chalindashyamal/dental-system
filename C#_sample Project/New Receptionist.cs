@@ -1,12 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace C__sample_Project
@@ -27,106 +21,94 @@ namespace C__sample_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string Rname = txtRname.Text;
+            string address = txtRAddress.Text;
+            string email = txtREmail.Text;
+
+            //numeric
+            string stringContact = txtRContact.Text;
+            string stringEmergency = txtREmergencyCP.Text;
+
+
+            //radio input
+            string gender = "";
+
+            if (radiobtnRMale.Checked)
             {
-                string Rname = txtRname.Text;
-                string address = txtRAddress.Text;
-                string email = txtREmail.Text;
+                gender = "Male";
+            }
+            else if (radiobtnRFemale.Checked)
+            {
+                gender = "Female";
+            }
 
-                //numeric
-                string stringContact = txtRContact.Text;
-                string stringEmergency = txtREmergencyCP.Text;
+            //DOB
+            DateTime selectedDate = dateTimePicker1.Value;
+            string date = selectedDate.ToString("yyyy-MM-dd");
 
+            DB_conection Objfunction = new DB_conection();
 
-                //radio input
-                string gender = "";
+            if (Rname == "" || address == "" || email == "" || stringContact == "" || stringEmergency == "" || gender == "" || selectedDate == new DateTime(2023, 5, 29))
+            {
+                MessageBox.Show("All fields must be entered");
+            }
+            else if (!Objfunction.IsNumeric(stringContact) || !Objfunction.IsNumeric(stringEmergency))
+            {
+                MessageBox.Show("Contact and Emergency contact should be numeric values");
+            }
+            else
+            {
+                //numeric contact and Econtact
 
-                if (radiobtnRMale.Checked)
+                int Contact = int.Parse(stringContact);
+                int emergency_contact_person = int.Parse(stringEmergency);
+
+                using (SqlConnection connection = new SqlConnection(Objfunction.connectionString))
                 {
-                    gender = "Male";
-                }
-                else if (radiobtnRFemale.Checked)
-                {
-                    gender = "Female";
-                }
-
-                //DOB
-                DateTime selectedDate = dateTimePicker1.Value;
-                string date = selectedDate.ToString("yyyy-MM-dd");
-
-
-
-
-                DB_conection Objfunction = new DB_conection();
-                if (Rname == "" || address == "" || email == "" || stringContact == "" || stringEmergency == "" || gender == "" || selectedDate == new DateTime(2023, 5, 29))
-                {
-                    MessageBox.Show("All fields must be entered");
-                }
-
-                else if (!Objfunction.IsNumeric(stringContact) || !Objfunction.IsNumeric(stringEmergency))
-                {
-                    MessageBox.Show("Contact and Emergency contact should be numeric values");
-                }
-
-                else
-                {
-                    //numeric contact and Econtact
-
-                    int Contact = int.Parse(stringContact);
-                    int emergency_contact_person = int.Parse(stringEmergency);
-
-
-                    using (MySqlConnection connection = new MySqlConnection(Objfunction.connectionString))
+                    using (SqlCommand command = connection.CreateCommand())
                     {
-                        using (MySqlCommand command = connection.CreateCommand())
+                        try
                         {
-                            try
+                            // Open the connection
+                            connection.Open();
+
+                            // Set the command text and parameters
+                            command.CommandText = "INSERT INTO receptionist (receptionist_name, dob, gender, email, contact_number, emergency_contact, address) VALUES (@Recename, @DOB, @gender, @Email, @ContactNumber, @Emcontact, @Address)";
+                            command.Parameters.AddWithValue("@Recename", Rname);
+                            command.Parameters.AddWithValue("@DOB", date);
+                            command.Parameters.AddWithValue("@gender", gender);
+                            command.Parameters.AddWithValue("@Email", email);
+                            command.Parameters.AddWithValue("@ContactNumber", Contact);
+                            command.Parameters.AddWithValue("@Address", address);
+                            command.Parameters.AddWithValue("@Emcontact", emergency_contact_person);
+
+                            // Execute the command
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
                             {
-                                // Open the connection
-                                connection.Open();
-
-                                // Set the command text and parameters
-                                command.CommandText = "INSERT INTO receptionist (receptionist_name, dob, gender, email, contact_no, address, emergency_contact_person) VALUES (@Recename, @DOB, @gender, @Email, @ContactNumber, @Address, @Emcontact)";
-                                command.Parameters.AddWithValue("@Recename", Rname);
-                                command.Parameters.AddWithValue("@DOB", date);
-                                command.Parameters.AddWithValue("@gender", gender);
-                                command.Parameters.AddWithValue("@Email", email);
-                                command.Parameters.AddWithValue("@ContactNumber", Contact);
-                                command.Parameters.AddWithValue("@Address", address);
-                                command.Parameters.AddWithValue("@Emcontact", emergency_contact_person);
-
-
-                                // Execute the command
-                                int rowsAffected = command.ExecuteNonQuery();
-
-                                if (rowsAffected > 0)
-                                {
-                                    // Data successfully inserted
-                                    MessageBox.Show("receptionist registered successfully!");
-                                }
-                                else
-                                {
-                                    // No rows affected
-                                    MessageBox.Show("receptionist added Failed!");
-                                }
-
+                                // Data successfully inserted
+                                MessageBox.Show("receptionist registered successfully!");
                             }
-                            catch (Exception ex)
+                            else
                             {
-                                MessageBox.Show("Error registering account: " + ex.Message);
+                                // No rows affected
+                                MessageBox.Show("receptionist added Failed!");
                             }
-                            finally
-                            {
-                                txtRname.Text = "";
-                                txtRAddress.Text = "";
-                                txtREmail.Text = "";
-                                radiobtnRMale.Checked = false;
-                                radiobtnRFemale.Checked = false;
-                                txtRContact.Text = "";
-                                txtREmergencyCP.Text = "";
-
-
-
-                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error registering account: " + ex.Message);
+                        }
+                        finally
+                        {
+                            txtRname.Text = "";
+                            txtRAddress.Text = "";
+                            txtREmail.Text = "";
+                            radiobtnRMale.Checked = false;
+                            radiobtnRFemale.Checked = false;
+                            txtRContact.Text = "";
+                            txtREmergencyCP.Text = "";
                         }
                     }
                 }

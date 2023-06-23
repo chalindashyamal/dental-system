@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,76 @@ namespace C__sample_Project
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            {
+                string Presc_appointment_id = txtPresc_appointment_id.Text;
+                string presc_des = txtpresc_des.Text;
+                string presc_pen_amount= txtpresc_pen_amount.Text;
+
+
+
+
+
+
+                DB_conection Objfunction = new DB_conection();
+
+                if (Presc_appointment_id == ""|| presc_des=="" || presc_pen_amount=="")
+                {
+                    MessageBox.Show("All fields must be entered");
+                }
+
+                else
+                {
+
+
+
+                    using (SqlConnection connection = new SqlConnection(Objfunction.connectionString))
+                    {
+                        using (SqlCommand command = connection.CreateCommand())
+                        {
+                            try
+                            {
+                                // Open the connection
+                                connection.Open();
+
+                                // Set the command text and parameters
+                                command.CommandText = "INSERT INTO prescriptions (appointment_id, description, pendding_amount) VALUES (@appointment_id, @description, @pendding_amount)";
+                                command.Parameters.AddWithValue("@appointment_id", Presc_appointment_id);
+                                command.Parameters.AddWithValue("@description", presc_des);
+                                command.Parameters.AddWithValue("@pendding_amount", presc_pen_amount);
+
+                                // Execute the command
+                                int rowsAffected = command.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    // Data successfully inserted
+                                    MessageBox.Show("Prescription created successfully!");
+                                }
+                                else
+                                {
+                                    // No rows affected
+                                    MessageBox.Show("Prescription create failed!");
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error registering account: " + ex.Message);
+                            }
+                            finally
+                            {
+                                txtPresc_appointment_id.Text = "";
+                                txtpresc_des.Text = "";
+                                txtpresc_pen_amount.Text = "";
+
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

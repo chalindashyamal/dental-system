@@ -22,5 +22,19 @@ namespace C__sample_Project
             Payment_List payment_List = new Payment_List();
             payment_List.Show();
         }
+
+        private void Payment_List_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dental_DBDataSet6.payments' table. You can move, or remove it, as needed.
+            this.paymentsTableAdapter.Fill(this.dental_DBDataSet6.payments);
+            // TODO: This line of code loads data into the 'dataSet1.payments' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'patientDataSet.patienttable' table. You can move, or remove it, as needed.
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

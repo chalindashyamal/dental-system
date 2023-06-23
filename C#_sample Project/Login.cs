@@ -1,15 +1,7 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Data.Common;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace C__sample_Project
 {
@@ -23,28 +15,24 @@ namespace C__sample_Project
         public string Username;
         public string password;
 
-
         private void button3_Click(object sender, EventArgs e)
-
         {
             Username = txtUserName.Text;
             password = txtPassword.Text;
 
-            //string connectionString = "server=your_server_name;user id=your_username;password=your_password;database=pms_db;sslmode=none;";
+            DB_conection function = new DB_conection();
 
             if (Username != "" && password != "")
             {
-                DB_conection functions = new DB_conection();
+                string selectQuery = "SELECT COUNT(*) FROM usertable WHERE username = @username AND password = @password";
 
-                string selectQuery = "SELECT COUNT(*) FROM usertable WHERE UserName = @username AND Password = @password";
-
-                using (MySqlConnection connection = new MySqlConnection(functions.connectionString))
+                using (SqlConnection connection = new SqlConnection(function.connectionString))
                 {
                     try
                     {
                         connection.Open();
 
-                        using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
+                        using (SqlCommand command = new SqlCommand(selectQuery, connection))
                         {
                             command.Parameters.AddWithValue("@username", Username);
                             command.Parameters.AddWithValue("@password", password);
@@ -53,32 +41,32 @@ namespace C__sample_Project
 
                             if (result > 0)
                             {
+                                selectQuery = "SELECT role FROM usertable WHERE username = @username";
+                                
+                                SqlCommand command2 = new SqlCommand(selectQuery, connection);
+                                command2.Parameters.AddWithValue("@username", Username);
+                                string result2 = Convert.ToString(command2.ExecuteScalar());
                                 // Login successful
-                                if (Username == "Receptionist")
+                                if (result2 == "receptionist")
                                 {
                                     new Home().Show();
                                     this.Hide();
                                 }
-                                else if(Username == "Doctor")
+                                else if (result2 == "doctor")
                                 {
                                     new Doctor_Login().Show();
                                     this.Hide();
-
                                 }
-
                                 else
                                 {
                                     new Admin_Login().Show();
                                     this.Hide();
-
                                 }
-
-                              
                             }
                             else
                             {
                                 // Invalid credentials
-                                MessageBox.Show("The user name or password you entered is incorrect,try again!");
+                                MessageBox.Show("The user name or password you entered is incorrect, try again!");
                             }
                         }
                     }
@@ -92,7 +80,6 @@ namespace C__sample_Project
             {
                 MessageBox.Show("Enter all required information!");
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -105,7 +92,7 @@ namespace C__sample_Project
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(ShowPassWordLogin.Checked==true)
+            if (ShowPassWordLogin.Checked == true)
             {
                 txtPassword.UseSystemPasswordChar = false;
             }
@@ -117,7 +104,7 @@ namespace C__sample_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            // Additional button click logic
         }
     }
 }

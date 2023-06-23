@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -117,6 +117,11 @@
     <Compile Include="Admin Login.Designer.cs">
       <DependentUpon>Admin Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppointmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Appointment_List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +129,41 @@
       <DependentUpon>Appointment_List.cs</DependentUpon>
     </Compile>
     <Compile Include="DB_conection.cs" />
+    <Compile Include="Dental_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_DBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_DBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_DBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_DBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_DBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_DBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_DBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_DBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_DBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_DBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dental_DBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dental_DBDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Doctor_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +301,94 @@
     <EmbeddedResource Include="Receptonist_List.resx">
       <DependentUpon>Receptonist_List.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AppointmentDataSet.xsc">
+      <DependentUpon>AppointmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AppointmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AppointmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AppointmentDataSet.xss">
+      <DependentUpon>AppointmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet.xsc">
+      <DependentUpon>Dental_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_DBDataSet.xss">
+      <DependentUpon>Dental_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet1.xsc">
+      <DependentUpon>Dental_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_DBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_DBDataSet1.xss">
+      <DependentUpon>Dental_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet2.xsc">
+      <DependentUpon>Dental_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_DBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_DBDataSet2.xss">
+      <DependentUpon>Dental_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet3.xsc">
+      <DependentUpon>Dental_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_DBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_DBDataSet3.xss">
+      <DependentUpon>Dental_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet4.xsc">
+      <DependentUpon>Dental_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_DBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_DBDataSet4.xss">
+      <DependentUpon>Dental_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet5.xsc">
+      <DependentUpon>Dental_DBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_DBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_DBDataSet5.xss">
+      <DependentUpon>Dental_DBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet6.xsc">
+      <DependentUpon>Dental_DBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Dental_DBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dental_DBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dental_DBDataSet6.xss">
+      <DependentUpon>Dental_DBDataSet6.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -286,6 +414,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dental_DB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dental_DB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Dental_DB.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

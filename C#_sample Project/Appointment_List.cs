@@ -60,5 +60,12 @@ namespace C__sample_Project
         {
 
         }
+
+        private void Appointment_List_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dental_DBDataSet2.appointments' table. You can move, or remove it, as needed.
+            this.appointmentsTableAdapter.Fill(this.dental_DBDataSet2.appointments);
+
+        }
     }
 }

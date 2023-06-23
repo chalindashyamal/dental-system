@@ -1,12 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace C__sample_Project
@@ -17,19 +11,23 @@ namespace C__sample_Project
         {
             InitializeComponent();
         }
+
         private DataTable dt; // Declare a class-level DataTable variable
+
+
+        DB_conection function = new DB_conection();
         public void loadData()
         {
-            DB_conection functions = new DB_conection();
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\YourDatabase.mdf;Integrated Security=True;";
 
-            using (MySqlConnection connection = new MySqlConnection(functions.connectionString))
+            using (SqlConnection connection = new SqlConnection(function.connectionString))
             {
                 connection.Open();
 
                 string query = "SELECT * FROM receptionist";
-                using (MySqlCommand command = new MySqlCommand(query, connection))
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    MySqlDataAdapter adapter = new MySqlDataAdapter();
+                    SqlDataAdapter adapter = new SqlDataAdapter();
                     adapter.SelectCommand = command;
                     dt = new DataTable(); // Assign the DataTable to the class-level variable
                     adapter.Fill(dt);
@@ -42,7 +40,6 @@ namespace C__sample_Project
                 }
             }
         }
-       
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -58,6 +55,8 @@ namespace C__sample_Project
 
         private void Receptonist_List_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dental_DBDataSet4.receptionist' table. You can move, or remove it, as needed.
+            this.receptionistTableAdapter.Fill(this.dental_DBDataSet4.receptionist);
             loadData();
         }
 
@@ -76,13 +75,12 @@ namespace C__sample_Project
             }
             catch
             {
-                MessageBox.Show("Not found try again!");
+                MessageBox.Show("Not found, try again!");
             }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-
             try
             {
                 // Add filter to dataGridView1 to show entries match the First name or the Last name
@@ -96,13 +94,12 @@ namespace C__sample_Project
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Not found try again!");
+                MessageBox.Show("Not found, try again!");
             }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
             try
             {
                 // Add filter to dataGridView1 to show entries match the phone_number
@@ -116,7 +113,7 @@ namespace C__sample_Project
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Not found try again!");
+                MessageBox.Show("Not found, try again!");
             }
         }
     }

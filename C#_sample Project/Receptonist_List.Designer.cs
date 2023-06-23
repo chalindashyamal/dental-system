@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Receptonist_List));
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -42,8 +43,21 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dental_DBDataSet4 = new C__sample_Project.Dental_DBDataSet4();
+            this.receptionistBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.receptionistTableAdapter = new C__sample_Project.Dental_DBDataSet4TableAdapters.receptionistTableAdapter();
+            this.receptionistidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.receptionistnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emergencycontactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receptionistBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -157,8 +171,21 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.receptionistidDataGridViewTextBoxColumn,
+            this.receptionistnameDataGridViewTextBoxColumn,
+            this.dobDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.contactnumberDataGridViewTextBoxColumn,
+            this.emergencycontactDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.receptionistBindingSource;
             this.dataGridView2.GridColor = System.Drawing.Color.White;
             this.dataGridView2.Location = new System.Drawing.Point(12, 221);
             this.dataGridView2.Name = "dataGridView2";
@@ -177,6 +204,77 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;
+            // 
+            // dental_DBDataSet4
+            // 
+            this.dental_DBDataSet4.DataSetName = "Dental_DBDataSet4";
+            this.dental_DBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // receptionistBindingSource
+            // 
+            this.receptionistBindingSource.DataMember = "receptionist";
+            this.receptionistBindingSource.DataSource = this.dental_DBDataSet4;
+            // 
+            // receptionistTableAdapter
+            // 
+            this.receptionistTableAdapter.ClearBeforeFill = true;
+            // 
+            // receptionistidDataGridViewTextBoxColumn
+            // 
+            this.receptionistidDataGridViewTextBoxColumn.DataPropertyName = "receptionist_id";
+            this.receptionistidDataGridViewTextBoxColumn.HeaderText = "receptionist_id";
+            this.receptionistidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.receptionistidDataGridViewTextBoxColumn.Name = "receptionistidDataGridViewTextBoxColumn";
+            this.receptionistidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // receptionistnameDataGridViewTextBoxColumn
+            // 
+            this.receptionistnameDataGridViewTextBoxColumn.DataPropertyName = "receptionist_name";
+            this.receptionistnameDataGridViewTextBoxColumn.HeaderText = "receptionist_name";
+            this.receptionistnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.receptionistnameDataGridViewTextBoxColumn.Name = "receptionistnameDataGridViewTextBoxColumn";
+            // 
+            // dobDataGridViewTextBoxColumn
+            // 
+            this.dobDataGridViewTextBoxColumn.DataPropertyName = "dob";
+            this.dobDataGridViewTextBoxColumn.HeaderText = "dob";
+            this.dobDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dobDataGridViewTextBoxColumn.Name = "dobDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
+            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // contactnumberDataGridViewTextBoxColumn
+            // 
+            this.contactnumberDataGridViewTextBoxColumn.DataPropertyName = "contact_number";
+            this.contactnumberDataGridViewTextBoxColumn.HeaderText = "contact_number";
+            this.contactnumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.contactnumberDataGridViewTextBoxColumn.Name = "contactnumberDataGridViewTextBoxColumn";
+            // 
+            // emergencycontactDataGridViewTextBoxColumn
+            // 
+            this.emergencycontactDataGridViewTextBoxColumn.DataPropertyName = "emergency_contact";
+            this.emergencycontactDataGridViewTextBoxColumn.HeaderText = "emergency_contact";
+            this.emergencycontactDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emergencycontactDataGridViewTextBoxColumn.Name = "emergencycontactDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             // 
             // Receptonist_List
             // 
@@ -204,6 +302,8 @@
             this.Load += new System.EventHandler(this.Receptonist_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receptionistBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +324,16 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Dental_DBDataSet4 dental_DBDataSet4;
+        private System.Windows.Forms.BindingSource receptionistBindingSource;
+        private Dental_DBDataSet4TableAdapters.receptionistTableAdapter receptionistTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn receptionistidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn receptionistnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dobDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contactnumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emergencycontactDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
     }
 }
