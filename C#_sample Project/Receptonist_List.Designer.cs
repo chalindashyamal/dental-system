@@ -42,10 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dental_DBDataSet4 = new C__sample_Project.Dental_DBDataSet4();
-            this.receptionistBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.receptionistTableAdapter = new C__sample_Project.Dental_DBDataSet4TableAdapters.receptionistTableAdapter();
             this.receptionistidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receptionistnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,10 +50,14 @@
             this.contactnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emergencycontactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.receptionistBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dental_DBDataSet4 = new C__sample_Project.Dental_DBDataSet4();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.receptionistTableAdapter = new C__sample_Project.Dental_DBDataSet4TableAdapters.receptionistTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receptionistBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -70,6 +70,7 @@
             this.button5.Size = new System.Drawing.Size(140, 46);
             this.button5.TabIndex = 88;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button4
             // 
@@ -195,30 +196,6 @@
             this.dataGridView2.TabIndex = 77;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 89;
-            this.pictureBox1.TabStop = false;
-            // 
-            // dental_DBDataSet4
-            // 
-            this.dental_DBDataSet4.DataSetName = "Dental_DBDataSet4";
-            this.dental_DBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // receptionistBindingSource
-            // 
-            this.receptionistBindingSource.DataMember = "receptionist";
-            this.receptionistBindingSource.DataSource = this.dental_DBDataSet4;
-            // 
-            // receptionistTableAdapter
-            // 
-            this.receptionistTableAdapter.ClearBeforeFill = true;
-            // 
             // receptionistidDataGridViewTextBoxColumn
             // 
             this.receptionistidDataGridViewTextBoxColumn.DataPropertyName = "receptionist_id";
@@ -276,6 +253,30 @@
             this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             // 
+            // receptionistBindingSource
+            // 
+            this.receptionistBindingSource.DataMember = "receptionist";
+            this.receptionistBindingSource.DataSource = this.dental_DBDataSet4;
+            // 
+            // dental_DBDataSet4
+            // 
+            this.dental_DBDataSet4.DataSetName = "Dental_DBDataSet4";
+            this.dental_DBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabStop = false;
+            // 
+            // receptionistTableAdapter
+            // 
+            this.receptionistTableAdapter.ClearBeforeFill = true;
+            // 
             // Receptonist_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -301,9 +302,9 @@
             this.Text = "Receptonist_List";
             this.Load += new System.EventHandler(this.Receptonist_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.receptionistBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

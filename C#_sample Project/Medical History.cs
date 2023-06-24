@@ -28,5 +28,10 @@ namespace C__sample_Project
         {
 
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

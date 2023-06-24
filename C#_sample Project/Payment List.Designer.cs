@@ -42,23 +42,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.paymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.patienttableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dental_DBDataSet6 = new C__sample_Project.Dental_DBDataSet6();
-            this.paymentsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.paymentsTableAdapter = new C__sample_Project.Dental_DBDataSet6TableAdapters.paymentsTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dental_DBDataSet6 = new C__sample_Project.Dental_DBDataSet6();
+            this.paymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.patienttableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.paymentsTableAdapter = new C__sample_Project.Dental_DBDataSet6TableAdapters.paymentsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patienttableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -71,6 +71,7 @@
             this.button5.Size = new System.Drawing.Size(140, 46);
             this.button5.TabIndex = 76;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button4
             // 
@@ -190,38 +191,6 @@
             this.dataGridView1.TabIndex = 65;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // paymentsBindingSource
-            // 
-            this.paymentsBindingSource.DataMember = "payments";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 80;
-            this.pictureBox1.TabStop = false;
-            // 
-            // patienttableBindingSource
-            // 
-            this.patienttableBindingSource.DataMember = "patienttable";
-            // 
-            // dental_DBDataSet6
-            // 
-            this.dental_DBDataSet6.DataSetName = "Dental_DBDataSet6";
-            this.dental_DBDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // paymentsBindingSource1
-            // 
-            this.paymentsBindingSource1.DataMember = "payments";
-            this.paymentsBindingSource1.DataSource = this.dental_DBDataSet6;
-            // 
-            // paymentsTableAdapter
-            // 
-            this.paymentsTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "payment_id";
@@ -258,6 +227,38 @@
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // paymentsBindingSource1
+            // 
+            this.paymentsBindingSource1.DataMember = "payments";
+            this.paymentsBindingSource1.DataSource = this.dental_DBDataSet6;
+            // 
+            // dental_DBDataSet6
+            // 
+            this.dental_DBDataSet6.DataSetName = "Dental_DBDataSet6";
+            this.dental_DBDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // paymentsBindingSource
+            // 
+            this.paymentsBindingSource.DataMember = "payments";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 80;
+            this.pictureBox1.TabStop = false;
+            // 
+            // patienttableBindingSource
+            // 
+            this.patienttableBindingSource.DataMember = "patienttable";
+            // 
+            // paymentsTableAdapter
+            // 
+            this.paymentsTableAdapter.ClearBeforeFill = true;
+            // 
             // Payment_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,11 +284,11 @@
             this.Text = "Payment_List";
             this.Load += new System.EventHandler(this.Payment_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patienttableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,25 @@ namespace C__sample_Project
         public Appointment_List()
         {
             InitializeComponent();
+            LoadDataToDataGridView();
+        }
+
+        private void LoadDataToDataGridView()
+        {
+            DB_conection functions = new DB_conection();
+
+            string query = "SELECT * FROM appointments";
+
+            using (SqlConnection connection = new SqlConnection(functions.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                adapter.Fill(dataTable);
+
+                dataGridView1.DataSource = dataTable;
+            }
         }
 
         private DataTable dt;
@@ -64,7 +84,6 @@ namespace C__sample_Project
         private void Appointment_List_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dental_DBDataSet2.appointments' table. You can move, or remove it, as needed.
-            this.appointmentsTableAdapter.Fill(this.dental_DBDataSet2.appointments);
 
         }
     }

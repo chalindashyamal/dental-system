@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace C__sample_Project
 {
@@ -16,9 +17,28 @@ namespace C__sample_Project
         public New_Appointment()
         {
             InitializeComponent();
+            LoadDataToDataGridView();
         }
 
-       
+        private void LoadDataToDataGridView()
+        {
+            DB_conection functions = new DB_conection();
+
+            string query = "SELECT * FROM appointments";
+
+            using (SqlConnection connection = new SqlConnection(functions.connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                adapter.Fill(dataTable);
+
+                dataGridView1.DataSource = dataTable;
+            }
+        }
+
+
         private void button3_Click_1(object sender, EventArgs e)
         {
             new Home().Show();
@@ -95,18 +115,13 @@ namespace C__sample_Project
                     }
                 }
             }
+
+            LoadDataToDataGridView();
         }
 
         private void New_Appointment_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dental_DBDataSet5.appointments' table. You can move, or remove it, as needed.
-            this.appointmentsTableAdapter3.Fill(this.dental_DBDataSet5.appointments);
-            // TODO: This line of code loads data into the 'dental_DBDataSet1.appointments' table. You can move, or remove it, as needed.
-            this.appointmentsTableAdapter2.Fill(this.dental_DBDataSet1.appointments);
-            // TODO: This line of code loads data into the 'dental_DBDataSet.appointments' table. You can move, or remove it, as needed.
-            this.appointmentsTableAdapter1.Fill(this.dental_DBDataSet.appointments);
-            // TODO: This line of code loads data into the 'appointmentDataSet.appointments' table. You can move, or remove it, as needed.
-            this.appointmentsTableAdapter.Fill(this.appointmentDataSet.appointments);
+
 
         }
 
@@ -114,5 +129,29 @@ namespace C__sample_Project
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try { 
+
+                // set date and time
+                DateTime selectedDate = txtAppdate_time2.Value;
+                string date = selectedDate.ToString("yyyy-MM-dd");
+
+                // Add filter to dataGridView1 to show entries matching the ID
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dataGridView1.DataSource;
+                bs.Filter = "date_and_time = " + date;
+                dataGridView1.DataSource = bs;
+
+                // Clear the text box
+                dateTimePicker1.Text = "";
+            }
+            catch
+            {
+                MessageBox.Show("Not found, try again!");
+            }
+        }
+
     }
 }
