@@ -41,7 +41,7 @@ namespace C__sample_Project
         {
             try
             {
-                string filter = "receptonist_id = " + textBox1.Text;
+                string filter = "receptionist_id  = " + textBox1.Text;
                 ApplyFilter(filter);
                 textBox1.Text = "";
             }
@@ -55,7 +55,7 @@ namespace C__sample_Project
         {
             try
             {
-                string filter = "receptonist_name LIKE '%" + textBox2.Text + "%'";
+                string filter = "receptionist_name LIKE '%" + textBox2.Text + "%'";
                 ApplyFilter(filter);
                 textBox2.Text = "";
             }
@@ -85,35 +85,6 @@ namespace C__sample_Project
             view.RowFilter = filter;
             dataGridView2.DataSource = view;
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-            // Save changes in the database
-            UpdateDatabase();
-
-            // Reset the dataGridView1 filters
-            dt.DefaultView.RowFilter = "";
-
-            // Clear the text boxes
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            // Reset the dataGridView1 filters
-            dt.DefaultView.RowFilter = "";
-
-            // Clear the text boxes
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-
-            LoadData();
-        }
-
         private void UpdateDatabase()
         {
             try
@@ -130,6 +101,33 @@ namespace C__sample_Project
             {
                 MessageBox.Show("Error updating database: " + ex.Message);
             }
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            // Save changes in the database
+            UpdateDatabase();
+
+            // Reset the dataGridView1 filters
+            dt.DefaultView.RowFilter = "";
+
+            // Clear the text boxes
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            // Reset the dataGridView1 filters
+            dt.DefaultView.RowFilter = "";
+
+            // Clear the text boxes
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+
+            LoadData();
         }
     }
 }
