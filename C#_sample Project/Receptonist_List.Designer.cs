@@ -70,7 +70,6 @@
             this.button5.Size = new System.Drawing.Size(140, 46);
             this.button5.TabIndex = 88;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button4
             // 
@@ -194,7 +193,6 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(1156, 312);
             this.dataGridView2.TabIndex = 77;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // receptionistidDataGridViewTextBoxColumn
             // 

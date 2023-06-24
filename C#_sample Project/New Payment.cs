@@ -32,7 +32,11 @@ namespace C__sample_Project
             string pay_Payment_Method = txtpay_Payment_Method.Text;
             string pay_Pendding_Amount = txtpay_Pendding_Amount.Text;
             string pay_amount = txtpay_amount.Text;
-           
+
+            DateTime currentDateTime = DateTime.Now;
+            string currentDateTimeString = currentDateTime.ToString();
+
+
 
 
 
@@ -58,10 +62,11 @@ namespace C__sample_Project
                             connection.Open();
 
                             // Set the command text and parameters
-                            command.CommandText = "INSERT INTO payments (appointment_id, payment_method, amount) VALUES (@appointment_id, @payment_method,@amount)";
+                            command.CommandText = "INSERT INTO payments (appointment_id, payment_method, amount, date) VALUES (@appointment_id, @payment_method,@amount, @datatime)";
                             command.Parameters.AddWithValue("@appointment_id", pay_Appointment_Id);
                             command.Parameters.AddWithValue("@payment_method", pay_Payment_Method);
                             command.Parameters.AddWithValue("@amount", pay_amount);
+                            command.Parameters.AddWithValue("@datatime", currentDateTimeString);
 
 
 

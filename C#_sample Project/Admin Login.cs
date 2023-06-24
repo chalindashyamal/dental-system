@@ -72,7 +72,7 @@ namespace C__sample_Project
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Edit_Profile edit_Profile = new Edit_Profile();
+            Edit_profile edit_Profile = new Edit_profile();
             edit_Profile.Show();
         }
 

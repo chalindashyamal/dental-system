@@ -57,5 +57,24 @@ namespace C__sample_Project
             new_Payment.Show();
             
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Patient_List patient_List = new Patient_List();
+            patient_List.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Appointment_List appointment_List = new Appointment_List();
+            appointment_List.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            Payment_List payment_List = new Payment_List();
+            payment_List.Show();
+        }
     }
 }

@@ -1,257 +1,134 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using System.Xml.Linq;
 
 namespace C__sample_Project
 {
-    public partial class Edit_Profile : Form
+    public partial class Edit_profile : Form
     {
-        public Edit_Profile()
+        private DataTable dt = new DataTable();
+
+        private DB_conection functions = new DB_conection();
+
+        public Edit_profile()
         {
             InitializeComponent();
         }
 
-        DB_conection functions = new DB_conection();
-
-        public string Apassword1;
-        public string Apassword2;
-        public string Dpassword1;
-        public string Dpassword2;
-        public string Rpassword1;
-        public string Rpassword2;
-
-
-
-
-
-
-
-        private void button1_Click(object sender, EventArgs e)
+        private void Edit_profile_Load(object sender, EventArgs e)
         {
-            Apassword1 = txtApassword1.Text;
-            Apassword2 = txtApassword2.Text;
-            
+            LoadData();
+        }
 
-            if (Apassword1 == Apassword2)
+        private void LoadData()
+        {
+            // Clear existing data in DataTable
+            dt.Clear();
+
+            string query = "SELECT * FROM usertable";
+
+            using (SqlConnection connection = new SqlConnection(functions.connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(command))
             {
-                using (MySqlConnection connection = new MySqlConnection(functions.connectionString))
-                {
-                    using (MySqlCommand command = connection.CreateCommand())
-                    {
-                        try
-                        {
-                            // Open the connection
-                            connection.Open();
-
-                            // Set the command text and parameters
-                            command.CommandText = "UPDATE usertable SET Password = @password WHERE UserName = 'Admin'";
-                            command.Parameters.AddWithValue("@password", Apassword1);
-                            
-
-                            // Execute the command
-                            int rowsAffected = command.ExecuteNonQuery();
-
-                            if (rowsAffected > 0)
-                            {
-                                // Data successfully updated
-                                MessageBox.Show("Profile updated successfully!");
-                            }
-                            else
-                            {
-                                // No rows affected
-                                MessageBox.Show("Profile update failed!");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error updating profile: " + ex.Message);
-                        }
-                        finally
-                        {
-                            // Close the connection
-                            connection.Close();
-                            txtApassword1.Text="";
-                            txtApassword2.Text="";
-                           
-
-                        }
-                    }
-                }
-
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
             }
-            else
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
             {
-                MessageBox.Show("Passwords do not match");
+                string filter = "id = " + textBox1.Text;
+                ApplyFilter(filter);
+                textBox1.Text = "";
             }
+            catch
+            {
+                MessageBox.Show("Not found, try again!");
+            }
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filter = "username LIKE '%" + textBox2.Text + "%'";
+                ApplyFilter(filter);
+                textBox2.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Not found, try again!");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ApplyFilter(string filter)
         {
-            Dpassword1 = txtDpassword1.Text;
-            Dpassword2 = txtDpassword2.Text;
+            DataView view = dt.DefaultView;
+            view.RowFilter = filter;
+            dataGridView1.DataSource = view;
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
 
-            if (Dpassword1 == Dpassword2)
+            // Save changes in the database
+            UpdateDatabase();
+
+            // Reset the dataGridView1 filters
+            dt.DefaultView.RowFilter = "";
+
+            // Clear the text boxes
+            textBox1.Text = "";
+            textBox2.Text = "";
+          
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void UpdateDatabase()
+        {
+            try
             {
-                using (MySqlConnection connection = new MySqlConnection(functions.connectionString))
+                using (SqlConnection connection = new SqlConnection(functions.connectionString))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM usertable", connection))
+                using (SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adapter))
                 {
-                    using (MySqlCommand command = connection.CreateCommand())
-                    {
-                        try
-                        {
-                            // Open the connection
-                            connection.Open();
-
-                            // Set the command text and parameters
-                            command.CommandText = "UPDATE usertable SET Password = @password WHERE UserName = 'Doctor'";
-                            command.Parameters.AddWithValue("@password", Dpassword1);
-
-
-                            // Execute the command
-                            int rowsAffected = command.ExecuteNonQuery();
-
-                            if (rowsAffected > 0)
-                            {
-                                // Data successfully updated
-                                MessageBox.Show("Profile updated successfully!");
-                            }
-                            else
-                            {
-                                // No rows affected
-                                MessageBox.Show("Profile update failed!");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error updating profile: " + ex.Message);
-                        }
-                        finally
-                        {
-                            // Close the connection
-                            connection.Close();
-                            txtDpassword1.Text = "";
-                            txtDpassword2.Text = "";
-
-
-                        }
-                    }
+                    adapter.Update(dt);
+                    MessageBox.Show("Changes saved");
                 }
-
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Passwords do not match");
+                MessageBox.Show("Error updating database: " + ex.Message);
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
 
-            Rpassword1 = txtRpassword1.Text;
-            Rpassword2 = txtRpassword2.Text;
+            // Reset the dataGridView1 filters
+            dt.DefaultView.RowFilter = "";
+
+            // Clear the text boxes
+            textBox1.Text = "";
+            textBox2.Text = "";
 
 
-            if (Rpassword1 == Rpassword2)
-            {
-                using (MySqlConnection connection = new MySqlConnection(functions.connectionString))
-                {
-                    using (MySqlCommand command = connection.CreateCommand())
-                    {
-                        try
-                        {
-                            // Open the connection
-                            connection.Open();
-
-                            // Set the command text and parameters
-                            command.CommandText = "UPDATE usertable SET Password = @password WHERE UserName = 'Receptionist'";
-                            command.Parameters.AddWithValue("@password", Rpassword1);
-
-
-                            // Execute the command
-                            int rowsAffected = command.ExecuteNonQuery();
-
-                            if (rowsAffected > 0)
-                            {
-                                // Data successfully updated
-                                MessageBox.Show("Profile updated successfully!");
-                            }
-                            else
-                            {
-                                // No rows affected
-                                MessageBox.Show("Profile update failed!");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error updating profile: " + ex.Message);
-                        }
-                        finally
-                        {
-                            // Close the connection
-                            connection.Close();
-                            txtRpassword1.Text = "";
-                            txtRpassword2.Text = "";
-
-
-                        }
-                    }
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Passwords do not match");
-            }
+            LoadData();
         }
 
-        private void ShowPasswordA_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ShowPasswordA.Checked == true)
-            {
-                txtApassword2.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtApassword2.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void ShowPasswordD_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ShowPasswordD.Checked == true)
-            {
-                txtDpassword2.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtDpassword2.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void ShowPasswordR_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ShowPasswordR.Checked == true)
-            {
-                txtRpassword2.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtRpassword2.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

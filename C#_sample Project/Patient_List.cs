@@ -1,79 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace C__sample_Project
 {
     public partial class Patient_List : Form
     {
+        private DataTable dt = new DataTable();
+
+        private DB_conection functions = new DB_conection();
+
         public Patient_List()
         {
             InitializeComponent();
         }
 
-        private DataTable dt; // Declare a class-level DataTable variable
-        public void loadData()
-        {
-            DB_conection functions = new DB_conection();
-
-            using (SqlConnection connection = new SqlConnection(functions.connectionString))
-            {
-                connection.Open();
-
-                string query = "SELECT * FROM patienttable";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter();
-                    adapter.SelectCommand = command;
-                    dt = new DataTable(); // Assign the DataTable to the class-level variable
-                    adapter.Fill(dt);
-
-                    BindingSource bindingSource = new BindingSource();
-                    bindingSource.DataSource = dt;
-
-                    dataGridView1.DataSource = bindingSource;
-                    connection.Close();
-                }
-            }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Additional cell content click logic
-        }
-
         private void Patient_List_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dental_DBDataSet3.patienttable' table. You can move, or remove it, as needed.
-            this.patienttableTableAdapter.Fill(this.dental_DBDataSet3.patienttable);
-            // TODO: This line of code loads data into the 'dataSet2.patienttable' table. You can move, or remove it, as needed.
-            loadData();
+            LoadData();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LoadData()
         {
-            // Additional button click logic
+            // Clear existing data in DataTable
+            dt.Clear();
+
+            string query = "SELECT * FROM patienttable";
+
+            using (SqlConnection connection = new SqlConnection(functions.connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+            {
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             try
             {
-                // Add filter to dataGridView1 to show entries matching the ID
-                BindingSource bs = new BindingSource();
-                bs.DataSource = dataGridView1.DataSource;
-                bs.Filter = "patient_id = " + textBox1.Text;
-                dataGridView1.DataSource = bs;
-
-                // Clear the text box
+                string filter = "patient_id = " + textBox1.Text;
+                ApplyFilter(filter);
                 textBox1.Text = "";
             }
             catch
@@ -86,13 +55,8 @@ namespace C__sample_Project
         {
             try
             {
-                // Add filter to dataGridView1 to show entries matching the First name or the Last name
-                BindingSource bs = new BindingSource();
-                bs.DataSource = dataGridView1.DataSource;
-                bs.Filter = "Patient_Name LIKE '%" + textBox2.Text + "%'";
-                dataGridView1.DataSource = bs;
-
-                // Clear the text box
+                string filter = "Patient_Name LIKE '%" + textBox2.Text + "%'";
+                ApplyFilter(filter);
                 textBox2.Text = "";
             }
             catch (Exception ex)
@@ -105,13 +69,8 @@ namespace C__sample_Project
         {
             try
             {
-                // Add filter to dataGridView1 to show entries matching the phone_number
-                BindingSource bs = new BindingSource();
-                bs.DataSource = dataGridView1.DataSource;
-                bs.Filter = "Contact_Number like '%" + textBox3.Text + "%'";
-                dataGridView1.DataSource = bs;
-
-                // Clear the text box
+                string filter = "Contact_Number like '%" + textBox3.Text + "%'";
+                ApplyFilter(filter);
                 textBox3.Text = "";
             }
             catch (Exception ex)
@@ -120,18 +79,21 @@ namespace C__sample_Project
             }
         }
 
+        private void ApplyFilter(string filter)
+        {
+            DataView view = dt.DefaultView;
+            view.RowFilter = filter;
+            dataGridView1.DataSource = view;
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
-            // Save changes in dataGridView1 to the database
 
-            // Show a message box to confirm the changes
-            MessageBox.Show("Changes saved");
+            // Save changes in the database
+            UpdateDatabase();
 
             // Reset the dataGridView1 filters
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dataGridView1.DataSource;
-            bs.Filter = "";
-            dataGridView1.DataSource = bs;
+            dt.DefaultView.RowFilter = "";
 
             // Clear the text boxes
             textBox1.Text = "";
@@ -142,21 +104,32 @@ namespace C__sample_Project
         private void button4_Click(object sender, EventArgs e)
         {
             // Reset the dataGridView1 filters
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dataGridView1.DataSource;
-            bs.Filter = "";
-            dataGridView1.DataSource = bs;
+            dt.DefaultView.RowFilter = "";
 
             // Clear the text boxes
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
+
+            LoadData();
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void UpdateDatabase()
         {
-            // Additional cell content click logic
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(functions.connectionString))
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM patienttable", connection))
+                using (SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adapter))
+                {
+                    adapter.Update(dt);
+                    MessageBox.Show("Changes saved");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating database: " + ex.Message);
+            }
         }
     }
 }
-
