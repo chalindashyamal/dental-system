@@ -14,6 +14,8 @@ namespace C__sample_Project
 {
     public partial class New_Appointment : Form
     {
+
+        DataTable dt = new DataTable();
         public New_Appointment()
         {
             InitializeComponent();
@@ -26,15 +28,16 @@ namespace C__sample_Project
 
             string query = "SELECT * FROM appointments";
 
+            dt.Clear();
+
             using (SqlConnection connection = new SqlConnection(functions.connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
 
-                adapter.Fill(dataTable);
+                adapter.Fill(dt);
 
-                dataGridView1.DataSource = dataTable;
+                dataGridView1.DataSource = dt;
             }
         }
 
@@ -132,26 +135,36 @@ namespace C__sample_Project
 
         private void button7_Click(object sender, EventArgs e)
         {
-            try { 
-
-                // set date and time
-                DateTime selectedDate = txtAppdate_time2.Value;
-                string date = selectedDate.ToString("yyyy-MM-dd");
-
-                // Add filter to dataGridView1 to show entries matching the ID
-                BindingSource bs = new BindingSource();
-                bs.DataSource = dataGridView1.DataSource;
-                bs.Filter = "date_and_time = " + date;
-                dataGridView1.DataSource = bs;
-
-                // Clear the text box
-                dateTimePicker1.Text = "";
+            try
+            {
+                string filter = "date_and_time like '%" + textBox1.Text + "%'";
+                ApplyFilter(filter);
+                textBox1.Text = "";
             }
             catch
             {
                 MessageBox.Show("Not found, try again!");
             }
+
         }
 
+        private void ApplyFilter(string filter)
+        {
+            DataView view = dt.DefaultView;
+            view.RowFilter = filter;
+            dataGridView1.DataSource = view;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            // Reset the dataGridView1 filters
+            dt.DefaultView.RowFilter = "";
+            LoadDataToDataGridView();
+        }
     }
 }

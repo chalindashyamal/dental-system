@@ -49,5 +49,11 @@ namespace C__sample_Project
             Payment_List payment_List = new Payment_List();
             payment_List.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Appointment_List appointment_List = new Appointment_List();
+            appointment_List.Show();
+        }
     }
 }

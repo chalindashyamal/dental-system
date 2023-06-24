@@ -76,5 +76,11 @@ namespace C__sample_Project
             Payment_List payment_List = new Payment_List();
             payment_List.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Appointment_status appointment_Status = new Appointment_status();
+            appointment_Status.Show();
+        }
     }
 }

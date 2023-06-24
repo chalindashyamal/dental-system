@@ -146,6 +146,7 @@
             this.Name = "Prescription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Prescription";
+            this.Load += new System.EventHandler(this.Prescription_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

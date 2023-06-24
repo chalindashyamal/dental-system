@@ -72,10 +72,10 @@ namespace C__sample_Project
                                 connection.Open();
 
                                 // Set the command text and parameters
-                                command.CommandText = "INSERT INTO prescriptions (appointment_id, description, pendding_amount) VALUES (@appointment_id, @description, @pendding_amount)";
+                                command.CommandText = "INSERT INTO prescriptions (appointment_id, description, pending_amount) VALUES (@appointment_id, @description, @pending_amount)";
                                 command.Parameters.AddWithValue("@appointment_id", Presc_appointment_id);
                                 command.Parameters.AddWithValue("@description", presc_des);
-                                command.Parameters.AddWithValue("@pendding_amount", presc_pen_amount);
+                                command.Parameters.AddWithValue("@pending_amount", presc_pen_amount);
 
                                 // Execute the command
                                 int rowsAffected = command.ExecuteNonQuery();
@@ -106,6 +106,11 @@ namespace C__sample_Project
                     }
                 }
             }
+        }
+
+        private void Prescription_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

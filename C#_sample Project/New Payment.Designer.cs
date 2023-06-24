@@ -39,6 +39,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtpay_amount = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             // 
             this.txtpay_Pendding_Amount.Location = new System.Drawing.Point(308, 229);
             this.txtpay_Pendding_Amount.Name = "txtpay_Pendding_Amount";
+            this.txtpay_Pendding_Amount.ReadOnly = true;
             this.txtpay_Pendding_Amount.Size = new System.Drawing.Size(270, 22);
             this.txtpay_Pendding_Amount.TabIndex = 5;
             // 
@@ -131,6 +133,17 @@
             this.txtpay_amount.Size = new System.Drawing.Size(270, 22);
             this.txtpay_amount.TabIndex = 61;
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(609, 93);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 46);
+            this.button2.TabIndex = 62;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // New_Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -139,6 +152,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 576);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.txtpay_amount);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -169,5 +183,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtpay_amount;
+        private System.Windows.Forms.Button button2;
     }
 }

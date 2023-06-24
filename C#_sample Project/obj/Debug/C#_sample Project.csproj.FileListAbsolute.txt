@@ -63,6 +63,6 @@ C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\bi
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C#_sample Project.csproj.CopyComplete
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Edit_Profile.resources
-C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Log_details.resources
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\bin\Debug\Dental_DB.mdf
 C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\bin\Debug\Dental_DB_log.ldf
+C:\Users\DELL\OneDrive\Documents\Projects\C#_sample Project\C#_sample Project\obj\Debug\C__sample_Project.Appointment_status.resources

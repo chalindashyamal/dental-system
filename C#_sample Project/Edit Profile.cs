@@ -132,5 +132,10 @@ namespace C__sample_Project
         {
 
         }
+
+        private void Edit_profile_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

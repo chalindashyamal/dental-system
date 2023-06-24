@@ -75,11 +75,5 @@ namespace C__sample_Project
             Edit_profile edit_Profile = new Edit_profile();
             edit_Profile.Show();
         }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            Log_details log_Details = new Log_details();
-            log_Details.Show();
-        }
     }
 }

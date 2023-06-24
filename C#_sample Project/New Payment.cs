@@ -25,6 +25,8 @@ namespace C__sample_Project
             this.Hide();
         }
 
+        DB_conection Objfunction = new DB_conection();
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -40,7 +42,7 @@ namespace C__sample_Project
 
 
 
-            DB_conection Objfunction = new DB_conection();
+            
 
             if (pay_Appointment_Id == "" || pay_Payment_Method=="" || pay_Pendding_Amount==""|| pay_amount=="")
             {
@@ -99,6 +101,41 @@ namespace C__sample_Project
                     }
                 }
             }
+        }
+
+        public string GetPendingAmount(string appointmentId)
+        {
+            string connectionString = Objfunction.connectionString;
+            string query = "SELECT pending_amount FROM prescriptions WHERE appointment_id = @appointmentId";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@appointmentId", appointmentId);
+
+                    object result = command.ExecuteScalar();
+                    if (result != null)
+                    {
+                        decimal pendingAmount = Convert.ToDecimal(result);
+                        string pendingAmountString = pendingAmount.ToString("C"); // Format as currency
+                        return pendingAmountString;
+                    }
+                    else
+                    {
+                        return "0";
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string ammount = GetPendingAmount(txtpay_AppointmentId.Text);
+
+            txtpay_Pendding_Amount.Text = ammount;
         }
     }
     
