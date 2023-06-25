@@ -26,7 +26,7 @@ namespace C__sample_Project
             {
                 string selectQuery = "SELECT COUNT(*) FROM usertable WHERE username = @username AND password = @password";
 
-                using (SqlConnection connection = new SqlConnection(function.connectionString))
+                using (SqlConnection connection = new SqlConnection(function.GetConnectionString()))
                 {
                     try
                     {

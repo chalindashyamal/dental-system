@@ -30,7 +30,7 @@ namespace C__sample_Project
             int appointmentId;
             if (int.TryParse(textBox1.Text, out appointmentId))
             {
-                using (SqlConnection connection = new SqlConnection(function.connectionString))
+                using (SqlConnection connection = new SqlConnection(function.GetConnectionString()))
                 {
                     connection.Open();
 

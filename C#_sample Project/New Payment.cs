@@ -54,7 +54,7 @@ namespace C__sample_Project
 
 
 
-                using (SqlConnection connection = new SqlConnection(Objfunction.connectionString))
+                using (SqlConnection connection = new SqlConnection(Objfunction.GetConnectionString()))
                 {
                     using (SqlCommand command = connection.CreateCommand())
                     {
@@ -105,7 +105,7 @@ namespace C__sample_Project
 
         public string GetPendingAmount(string appointmentId)
         {
-            string connectionString = Objfunction.connectionString;
+            string connectionString = Objfunction.GetConnectionString();
             string query = "SELECT pending_amount FROM prescriptions WHERE appointment_id = @appointmentId";
 
             using (SqlConnection connection = new SqlConnection(connectionString))

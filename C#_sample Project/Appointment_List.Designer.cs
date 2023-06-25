@@ -47,7 +47,7 @@
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(314, 143);
+            this.button5.Location = new System.Drawing.Point(309, 187);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(140, 53);
@@ -59,7 +59,7 @@
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(587, 143);
+            this.button4.Location = new System.Drawing.Point(582, 187);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 53);
@@ -69,7 +69,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(767, 73);
+            this.button7.Location = new System.Drawing.Point(762, 117);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(140, 28);
@@ -81,7 +81,7 @@
             // button8
             // 
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Location = new System.Drawing.Point(767, 44);
+            this.button8.Location = new System.Drawing.Point(762, 88);
             this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(140, 27);
@@ -93,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 85);
+            this.label2.Location = new System.Drawing.Point(123, 129);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 16);
@@ -102,7 +102,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(314, 82);
+            this.textBox2.Location = new System.Drawing.Point(309, 126);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(413, 22);
@@ -111,7 +111,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 53);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(123, 97);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 16);
@@ -120,7 +121,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(314, 53);
+            this.textBox1.Location = new System.Drawing.Point(309, 97);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(413, 22);
@@ -133,11 +134,11 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 221);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 276);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1156, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(1156, 257);
             this.dataGridView1.TabIndex = 65;
             // 
             // pictureBox1

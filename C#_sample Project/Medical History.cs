@@ -28,7 +28,7 @@ namespace C__sample_Project
 
             string query = "SELECT prescription_id, appointment_id, description FROM prescriptions ";
 
-            using (SqlConnection connection = new SqlConnection(functions.connectionString))
+            using (SqlConnection connection = new SqlConnection(functions.GetConnectionString()))
             using (SqlCommand command = new SqlCommand(query, connection))
             using (SqlDataAdapter adapter = new SqlDataAdapter(command))
             {
@@ -44,7 +44,7 @@ namespace C__sample_Project
 
             string query = "SELECT prescription_id, appointment_id, description FROM prescriptions WHERE appointment_id IN ( SELECT appointment_id FROM appointments WHERE patient_id = " + GetPatientIdFromAppointments(appId) + ")";
 
-            using (SqlConnection connection = new SqlConnection(functions.connectionString))
+            using (SqlConnection connection = new SqlConnection(functions.GetConnectionString()))
             using (SqlCommand command = new SqlCommand(query, connection))
             using (SqlDataAdapter adapter = new SqlDataAdapter(command))
             {
@@ -59,7 +59,7 @@ namespace C__sample_Project
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(functions.connectionString))
+                using (SqlConnection connection = new SqlConnection(functions.GetConnectionString()))
                 {
                     connection.Open();
 
@@ -101,7 +101,7 @@ namespace C__sample_Project
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(functions.connectionString))
+                using (SqlConnection connection = new SqlConnection(functions.GetConnectionString()))
                 using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT prescription_id, appointment_id, description FROM prescriptions", connection))
                 using (SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adapter))
                 {

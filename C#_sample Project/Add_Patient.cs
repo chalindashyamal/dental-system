@@ -67,7 +67,7 @@ namespace C__sample_Project
                 int Econtact = int.Parse(stringEmergency);
 
 
-                using (SqlConnection connection = new SqlConnection(Objfunction.connectionString))
+                using (SqlConnection connection = new SqlConnection(Objfunction.GetConnectionString()))
                 {
                     using (SqlCommand command = connection.CreateCommand())
                     {

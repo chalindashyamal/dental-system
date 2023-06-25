@@ -28,7 +28,7 @@ namespace C__sample_Project
 
             string query = "SELECT * FROM usertable";
 
-            using (SqlConnection connection = new SqlConnection(functions.connectionString))
+            using (SqlConnection connection = new SqlConnection(functions.GetConnectionString()))
             using (SqlCommand command = new SqlCommand(query, connection))
             using (SqlDataAdapter adapter = new SqlDataAdapter(command))
             {
@@ -100,7 +100,7 @@ namespace C__sample_Project
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(functions.connectionString))
+                using (SqlConnection connection = new SqlConnection(functions.GetConnectionString()))
                 using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM usertable", connection))
                 using (SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adapter))
                 {

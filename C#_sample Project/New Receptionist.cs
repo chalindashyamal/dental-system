@@ -63,7 +63,7 @@ namespace C__sample_Project
                 int Contact = int.Parse(stringContact);
                 int emergency_contact_person = int.Parse(stringEmergency);
 
-                using (SqlConnection connection = new SqlConnection(Objfunction.connectionString))
+                using (SqlConnection connection = new SqlConnection(Objfunction.GetConnectionString()))
                 {
                     using (SqlCommand command = connection.CreateCommand())
                     {

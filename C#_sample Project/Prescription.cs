@@ -62,7 +62,7 @@ namespace C__sample_Project
 
 
 
-                    using (SqlConnection connection = new SqlConnection(Objfunction.connectionString))
+                    using (SqlConnection connection = new SqlConnection(Objfunction.GetConnectionString()))
                     {
                         using (SqlCommand command = connection.CreateCommand())
                         {

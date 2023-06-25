@@ -30,7 +30,7 @@ namespace C__sample_Project
 
             dt.Clear();
 
-            using (SqlConnection connection = new SqlConnection(functions.connectionString))
+            using (SqlConnection connection = new SqlConnection(functions.GetConnectionString()))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -76,7 +76,7 @@ namespace C__sample_Project
        
 
 
-                    using (SqlConnection connection = new SqlConnection(Objfunction.connectionString))
+                    using (SqlConnection connection = new SqlConnection(Objfunction.GetConnectionString()))
                     {
                         using (SqlCommand command = connection.CreateCommand())
                         {
