@@ -28,7 +28,9 @@ namespace C__sample_Project
         {
             if (MessageBox.Show("Are you sure you want to exit?", "Exit message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                Login ObjLogin = new Login();
+                this.Hide();
+                ObjLogin.Show();
             }
         }
 

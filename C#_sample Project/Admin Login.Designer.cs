@@ -47,9 +47,9 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 92);
+            this.button1.Location = new System.Drawing.Point(142, 395);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 74);
+            this.button1.Size = new System.Drawing.Size(151, 74);
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -59,9 +59,9 @@
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(185, 92);
+            this.button2.Location = new System.Drawing.Point(607, 147);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 74);
+            this.button2.Size = new System.Drawing.Size(151, 74);
             this.button2.TabIndex = 11;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -71,9 +71,9 @@
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(12, 411);
+            this.button3.Location = new System.Drawing.Point(379, 395);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 74);
+            this.button3.Size = new System.Drawing.Size(151, 74);
             this.button3.TabIndex = 16;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -83,9 +83,9 @@
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(185, 411);
+            this.button4.Location = new System.Drawing.Point(142, 147);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 74);
+            this.button4.Size = new System.Drawing.Size(151, 74);
             this.button4.TabIndex = 17;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -95,9 +95,9 @@
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(185, 304);
+            this.button5.Location = new System.Drawing.Point(379, 147);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 74);
+            this.button5.Size = new System.Drawing.Size(151, 74);
             this.button5.TabIndex = 18;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -107,9 +107,9 @@
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(12, 518);
+            this.button6.Location = new System.Drawing.Point(142, 273);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(141, 74);
+            this.button6.Size = new System.Drawing.Size(151, 74);
             this.button6.TabIndex = 19;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -119,9 +119,9 @@
             this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(185, 518);
+            this.button7.Location = new System.Drawing.Point(607, 395);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(141, 74);
+            this.button7.Size = new System.Drawing.Size(151, 74);
             this.button7.TabIndex = 20;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -130,9 +130,9 @@
             // 
             this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Location = new System.Drawing.Point(12, 198);
+            this.button8.Location = new System.Drawing.Point(379, 273);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(141, 74);
+            this.button8.Size = new System.Drawing.Size(151, 74);
             this.button8.TabIndex = 21;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -141,9 +141,9 @@
             // 
             this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.Location = new System.Drawing.Point(12, 304);
+            this.button9.Location = new System.Drawing.Point(607, 277);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(141, 74);
+            this.button9.Size = new System.Drawing.Size(151, 74);
             this.button9.TabIndex = 22;
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -164,7 +164,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1066, 623);
+            this.ClientSize = new System.Drawing.Size(883, 593);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
