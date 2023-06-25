@@ -87,9 +87,10 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(136, 293);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 20);
+            this.label9.Size = new System.Drawing.Size(124, 20);
             this.label9.TabIndex = 43;
-            this.label9.Text = "Amount";
+            this.label9.Text = "Whole payment";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtpay_Payment_Method
             // 

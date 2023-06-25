@@ -137,6 +137,11 @@ namespace C__sample_Project
 
             txtpay_Pendding_Amount.Text = ammount;
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

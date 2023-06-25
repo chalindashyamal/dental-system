@@ -72,7 +72,6 @@
             this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 38;
             this.label1.Text = "Patient ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -200,7 +199,6 @@
             this.Name = "New_Appointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New_Appointment";
-            this.Load += new System.EventHandler(this.New_Appointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

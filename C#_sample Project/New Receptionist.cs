@@ -106,12 +106,14 @@ namespace C__sample_Project
                         finally
                         {
                             txtRname.Text = "";
+                            txtuser_id.Text = "";
                             txtRAddress.Text = "";
                             txtREmail.Text = "";
                             radiobtnRMale.Checked = false;
                             radiobtnRFemale.Checked = false;
                             txtRContact.Text = "";
                             txtREmergencyCP.Text = "";
+                            
                         }
                     }
                 }

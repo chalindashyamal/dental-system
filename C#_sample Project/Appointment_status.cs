@@ -18,6 +18,7 @@ namespace C__sample_Project
         private void button1_Click(object sender, EventArgs e)
         {
             UpdateStatus("accepted");
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -44,10 +45,12 @@ namespace C__sample_Project
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Status updated successfully.");
+                            textBox1.Text = "";
                         }
                         else
                         {
                             MessageBox.Show("Appointment ID not found.");
+                            textBox1.Text = "";
                         }
                     }
 

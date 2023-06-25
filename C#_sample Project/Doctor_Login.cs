@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,11 +16,128 @@ namespace C__sample_Project
         public Doctor_Login()
         {
             InitializeComponent();
+            GetPatientTableCount();
+            GetAppointmentCount();
+            GetReceptionistCount();
         }
+        DB_conection functions = new DB_conection();
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //get patient count
+        public void GetPatientTableCount()
+        {
+            int count = 0;
+
+            string connectionString = functions.GetConnectionString();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT COUNT(*) FROM patienttable";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    count = (int)command.ExecuteScalar();
+                }
+                catch (Exception ex)
+                {
+                    // Handle any potential exceptions here
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+            label5.Text = count.ToString();
+        }
+
+        //get appintment count
+        public void GetAppointmentCount()
+        {
+            int count = 0;
+
+            string connectionString = functions.GetConnectionString();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT COUNT(*) FROM appointment";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    count = (int)command.ExecuteScalar();
+                }
+                catch (Exception ex)
+                {
+                    // Handle any potential exceptions here
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+            label6.Text = count.ToString();
+        }
+
+        //Get Receptionist Count
+        public void GetReceptionistCount()
+        {
+            int count = 0;
+
+            string connectionString = functions.GetConnectionString();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT COUNT(*) FROM receptionist";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    count = (int)command.ExecuteScalar();
+                }
+                catch (Exception ex)
+                {
+                    // Handle any potential exceptions here
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+            label7.Text = count.ToString();
+        }
+
+        //Get Payment Sum
+        public void GetPaymentSum()
+        {
+            decimal sum = 0;
+
+            string connectionString = functions.GetConnectionString();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT SUM(amount) FROM payments";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    object result = command.ExecuteScalar();
+
+                    if (result != DBNull.Value)
+                    {
+                        sum = Convert.ToDecimal(result);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any potential exceptions here
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+            label8.Text = sum.ToString();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
