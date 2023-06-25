@@ -14,6 +14,7 @@ namespace C__sample_Project
         public Edit_profile()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void Edit_profile_Load(object sender, EventArgs e)

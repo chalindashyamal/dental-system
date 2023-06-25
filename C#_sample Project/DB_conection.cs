@@ -12,10 +12,7 @@ namespace C__sample_Project
     {
         public string GetConnectionString()
         {
-            string databaseFileName = "Dental_DB.mdf";
-            string projectPath = Application.StartupPath;
-            string databaseFilePath = Path.Combine(projectPath, databaseFileName);
-            string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"{databaseFilePath}\";Integrated Security=True";
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\OneDrive\\Documents\\Projects\\C#_sample Project\\C#_sample Project\\Dental_DB.mdf\";Integrated Security=True";
 
             return connectionString;
         }

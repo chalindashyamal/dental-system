@@ -24,10 +24,12 @@ namespace C__sample_Project
             string Rname = txtRname.Text;
             string address = txtRAddress.Text;
             string email = txtREmail.Text;
+            string user_id = txtuser_id.Text;
 
             //numeric
             string stringContact = txtRContact.Text;
             string stringEmergency = txtREmergencyCP.Text;
+
 
 
             //radio input
@@ -73,7 +75,7 @@ namespace C__sample_Project
                             connection.Open();
 
                             // Set the command text and parameters
-                            command.CommandText = "INSERT INTO receptionist (receptionist_name, dob, gender, email, contact_number, emergency_contact, address) VALUES (@Recename, @DOB, @gender, @Email, @ContactNumber, @Emcontact, @Address)";
+                            command.CommandText = "INSERT INTO receptionist (receptionist_name, dob, gender, email, contact_number, emergency_contact, address,user_id) VALUES (@Recename, @DOB, @gender, @Email, @ContactNumber, @Emcontact, @Address,@user_id)";
                             command.Parameters.AddWithValue("@Recename", Rname);
                             command.Parameters.AddWithValue("@DOB", date);
                             command.Parameters.AddWithValue("@gender", gender);
@@ -81,6 +83,7 @@ namespace C__sample_Project
                             command.Parameters.AddWithValue("@ContactNumber", Contact);
                             command.Parameters.AddWithValue("@Address", address);
                             command.Parameters.AddWithValue("@Emcontact", emergency_contact_person);
+                            command.Parameters.AddWithValue("@user_id", user_id);
 
                             // Execute the command
                             int rowsAffected = command.ExecuteNonQuery();
@@ -114,5 +117,7 @@ namespace C__sample_Project
                 }
             }
         }
+
+      
     }
 }

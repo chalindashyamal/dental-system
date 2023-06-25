@@ -14,6 +14,7 @@ namespace C__sample_Project
         public Receptonist_List()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void Receptonist_List_Load(object sender, EventArgs e)
