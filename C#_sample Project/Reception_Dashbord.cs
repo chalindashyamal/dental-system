@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,123 @@ namespace C__sample_Project
         public Home()
         {
             InitializeComponent();
+            GetPatientTableCount();
+            GetAppointmentCount();
+            GetReceptionistCount();
+            GetPaymentSum();
         }
+
+        DB_conection functions = new DB_conection();
+
+        public void GetPatientTableCount()
+        {
+            int count = 0;
+
+            string connectionString = functions.GetConnectionString();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT COUNT(*) FROM patienttable";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    count = (int)command.ExecuteScalar();
+                }
+                catch (Exception ex)
+                {
+                    // Handle any potential exceptions here
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+            label5.Text = count.ToString();
+        }
+
+        public void GetAppointmentCount()
+        {
+            int count = 0;
+
+            string connectionString = functions.GetConnectionString();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT COUNT(*) FROM appointment";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    count = (int)command.ExecuteScalar();
+                }
+                catch (Exception ex)
+                {
+                    // Handle any potential exceptions here
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+            label6.Text = count.ToString();
+        }
+
+        public void GetReceptionistCount()
+        {
+            int count = 0;
+
+            string connectionString = functions.GetConnectionString();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT COUNT(*) FROM receptionist";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    count = (int)command.ExecuteScalar();
+                }
+                catch (Exception ex)
+                {
+                    // Handle any potential exceptions here
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+            label7.Text = count.ToString();
+        }
+
+        public void GetPaymentSum()
+        {
+            decimal sum = 0;
+
+            string connectionString = functions.GetConnectionString();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT SUM(amount) FROM payments";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    object result = command.ExecuteScalar();
+
+                    if (result != DBNull.Value)
+                    {
+                        sum = Convert.ToDecimal(result);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any potential exceptions here
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+            label8.Text = sum.ToString();
+        }
+
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -83,6 +200,31 @@ namespace C__sample_Project
         {
             Appointment_status appointment_Status = new Appointment_status();
             appointment_Status.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

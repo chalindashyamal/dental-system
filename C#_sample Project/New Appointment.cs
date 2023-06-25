@@ -57,6 +57,7 @@ namespace C__sample_Project
         {
             {
                 string App_Patient_ID = txtAppId.Text;
+                string App_time = textBox2.Text;
 
                 // set date and time
                 DateTime selectedDate = txtAppdate_time2.Value;
@@ -86,10 +87,11 @@ namespace C__sample_Project
                                 connection.Open();
 
                                 // Set the command text and parameters
-                                command.CommandText = "INSERT INTO appointments (patient_id, date_and_time, status) VALUES (@patient_id, @date_and_time, 'pending')";
+                                command.CommandText = "INSERT INTO appointments (patient_id, appointment_date, appointment_time,status) VALUES (@patient_id, @appointment_date, @appointment_time, 'pending')";
                                 command.Parameters.AddWithValue("@patient_id", App_Patient_ID);
-                                command.Parameters.AddWithValue("@date_and_time", AppAppointment_Date_And_Time);
-                               
+                                command.Parameters.AddWithValue("@appointment_date", AppAppointment_Date_And_Time);
+                                command.Parameters.AddWithValue("@appointment_time", App_time);
+
                                 // Execute the command
                                 int rowsAffected = command.ExecuteNonQuery();
 
@@ -112,7 +114,9 @@ namespace C__sample_Project
                             {
                                 txtAppId.Text = "";
                                 txtAppdate_time2.Text = "";
-                                
+                                textBox2.Text = "";
+
+
                             }
                         }
                     }
