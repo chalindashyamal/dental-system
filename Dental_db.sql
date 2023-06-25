@@ -1,1 +1,0 @@
-patienttableSELECT * FROM dental_db.patienttable;
