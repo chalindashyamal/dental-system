@@ -141,7 +141,8 @@ namespace C__sample_Project
         {
             try
             {
-                string filter = "date_and_time like '%" + textBox1.Text + "%'";
+                string searchText = textBox1.Text;
+                string filter = " appointment_date like '%" + searchText + "%' or appointment_time LIKE '%" + searchText + "%'";
                 ApplyFilter(filter);
                 textBox1.Text = "";
             }

@@ -23,8 +23,54 @@ namespace C__sample_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UpdateStatus("rejected");
+            Delete();
         }
+
+        private void Delete()
+        {
+            if (int.TryParse(textBox1.Text, out int appointmentId))
+            {
+                DB_conection functions = new DB_conection();
+
+                string connectionString = functions.GetConnectionString();
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        string query = "DELETE FROM appointments WHERE appointment_id = @appointmentId";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@appointmentId", appointmentId);
+
+                            int rowsAffected = command.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Appointment deleted successfully.");
+                                textBox1.Text = "";
+                            }
+                            else
+                            {
+                                MessageBox.Show("Appointment ID not found.");
+                                textBox1.Text = "";
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle any potential exceptions here
+                        MessageBox.Show("There's a payment already done for this appointment. Cannot be deleted.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid appointment ID. Please enter a valid numeric ID.");
+            }
+        }
+
 
         private void UpdateStatus(string status)
         {

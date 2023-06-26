@@ -58,7 +58,7 @@ namespace C__sample_Project
         //get appintment count
         public void GetAppointmentCount()
         {
-            int count = 4;
+            int count = 0;
 
             string connectionString = functions.GetConnectionString();
 
@@ -175,6 +175,11 @@ namespace C__sample_Project
         {
             Appointment_List appointment_List = new Appointment_List();
             appointment_List.Show();
+        }
+
+        private void Doctor_Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -54,7 +54,7 @@ namespace C__sample_Project
         //get appintment count
         public void GetAppointmentCount()
         {
-            int count = 4;
+            int count = 0;
 
             string connectionString = functions.GetConnectionString();
 
@@ -64,7 +64,7 @@ namespace C__sample_Project
                 {
                     connection.Open();
 
-                    string query = "SELECT COUNT(*) FROM appointment";
+                    string query = "SELECT COUNT(*) FROM appointments WHERE status = 'accepted'";
                     SqlCommand command = new SqlCommand(query, connection);
                     count = (int)command.ExecuteScalar();
                 }
@@ -199,6 +199,11 @@ namespace C__sample_Project
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Admin_Login_Load(object sender, EventArgs e)
         {
 
         }

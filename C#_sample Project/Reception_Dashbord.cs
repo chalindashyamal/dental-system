@@ -52,7 +52,7 @@ namespace C__sample_Project
 
         public void GetAppointmentCount()
         {
-            int count = 4;
+            int count = 0;
 
             string connectionString = functions.GetConnectionString();
 
@@ -62,14 +62,14 @@ namespace C__sample_Project
                 {
                     connection.Open();
 
-                    string query = "SELECT COUNT(*) FROM appointment";
+                    string query = "SELECT COUNT(*) FROM appointments";
                     SqlCommand command = new SqlCommand(query, connection);
                     count = (int)command.ExecuteScalar();
                 }
                 catch (Exception ex)
                 {
                     // Handle any potential exceptions here
-                    Console.WriteLine("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
 
