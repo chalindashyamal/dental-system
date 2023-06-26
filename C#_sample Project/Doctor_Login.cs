@@ -68,7 +68,7 @@ namespace C__sample_Project
                 {
                     connection.Open();
 
-                    string query = "SELECT COUNT(*) FROM appointment";
+                    string query = "SELECT COUNT(*) FROM appointments";
                     SqlCommand command = new SqlCommand(query, connection);
                     count = (int)command.ExecuteScalar();
                 }
