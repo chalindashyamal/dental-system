@@ -56,7 +56,7 @@
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(274, 152);
+            this.button5.Location = new System.Drawing.Point(339, 160);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(140, 46);
@@ -68,7 +68,7 @@
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(547, 152);
+            this.button4.Location = new System.Drawing.Point(612, 160);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 46);
@@ -78,7 +78,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(767, 110);
+            this.button6.Location = new System.Drawing.Point(832, 118);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(140, 28);
@@ -89,7 +89,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(767, 73);
+            this.button7.Location = new System.Drawing.Point(832, 81);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(140, 28);
@@ -100,7 +100,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(767, 43);
+            this.button8.Location = new System.Drawing.Point(832, 51);
             this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(140, 28);
@@ -112,7 +112,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(128, 117);
+            this.label3.Location = new System.Drawing.Point(193, 125);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 16);
@@ -121,7 +121,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(274, 113);
+            this.textBox3.Location = new System.Drawing.Point(339, 121);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(413, 22);
@@ -130,7 +130,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 85);
+            this.label2.Location = new System.Drawing.Point(193, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 16);
@@ -139,7 +139,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(274, 81);
+            this.textBox2.Location = new System.Drawing.Point(339, 89);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(413, 22);
@@ -148,7 +148,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 53);
+            this.label1.Location = new System.Drawing.Point(193, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 16);
@@ -157,7 +157,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 49);
+            this.textBox1.Location = new System.Drawing.Point(339, 57);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(413, 22);
@@ -192,7 +192,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(7, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(262, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;

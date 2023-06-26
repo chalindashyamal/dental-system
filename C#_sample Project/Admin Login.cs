@@ -54,7 +54,7 @@ namespace C__sample_Project
         //get appintment count
         public void GetAppointmentCount()
         {
-            int count = 0;
+            int count = 4;
 
             string connectionString = functions.GetConnectionString();
 
@@ -196,6 +196,11 @@ namespace C__sample_Project
         {
             Edit_profile edit_Profile = new Edit_profile();
             edit_Profile.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

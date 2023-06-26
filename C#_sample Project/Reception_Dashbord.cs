@@ -52,7 +52,7 @@ namespace C__sample_Project
 
         public void GetAppointmentCount()
         {
-            int count = 0;
+            int count = 4;
 
             string connectionString = functions.GetConnectionString();
 

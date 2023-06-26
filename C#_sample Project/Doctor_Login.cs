@@ -19,6 +19,7 @@ namespace C__sample_Project
             GetPatientTableCount();
             GetAppointmentCount();
             GetReceptionistCount();
+            GetPaymentSum();
         }
         DB_conection functions = new DB_conection();
 
@@ -57,7 +58,7 @@ namespace C__sample_Project
         //get appintment count
         public void GetAppointmentCount()
         {
-            int count = 0;
+            int count = 4;
 
             string connectionString = functions.GetConnectionString();
 

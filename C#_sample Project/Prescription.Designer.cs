@@ -94,7 +94,7 @@
             this.btnNewPatient.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewPatient.Location = new System.Drawing.Point(633, 13);
             this.btnNewPatient.Name = "btnNewPatient";
-            this.btnNewPatient.Size = new System.Drawing.Size(262, 54);
+            this.btnNewPatient.Size = new System.Drawing.Size(262, 46);
             this.btnNewPatient.TabIndex = 57;
             this.btnNewPatient.UseVisualStyleBackColor = true;
             this.btnNewPatient.Click += new System.EventHandler(this.btnNewPatient_Click);
@@ -104,7 +104,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(249, 46);
+            this.pictureBox1.Size = new System.Drawing.Size(262, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 59;
             this.pictureBox1.TabStop = false;

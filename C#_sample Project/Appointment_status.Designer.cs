@@ -47,21 +47,23 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(344, 200);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 30);
+            this.button1.Size = new System.Drawing.Size(116, 46);
             this.button1.TabIndex = 1;
-            this.button1.Text = "acsept";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(539, 200);
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(521, 200);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 30);
+            this.button2.Size = new System.Drawing.Size(116, 46);
             this.button2.TabIndex = 2;
-            this.button2.Text = "reject";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -78,9 +80,11 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(292, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(262, 46);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 

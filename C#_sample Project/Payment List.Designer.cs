@@ -62,7 +62,7 @@
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(327, 129);
+            this.button5.Location = new System.Drawing.Point(369, 152);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(140, 46);
@@ -74,7 +74,7 @@
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(545, 129);
+            this.button4.Location = new System.Drawing.Point(587, 152);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 46);
@@ -84,7 +84,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(767, 73);
+            this.button7.Location = new System.Drawing.Point(809, 96);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(140, 28);
@@ -95,7 +95,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(767, 43);
+            this.button8.Location = new System.Drawing.Point(809, 66);
             this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(140, 28);
@@ -107,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 85);
+            this.label2.Location = new System.Drawing.Point(170, 108);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 16);
@@ -116,7 +116,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(327, 80);
+            this.textBox2.Location = new System.Drawing.Point(369, 103);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(413, 22);
@@ -125,7 +125,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 53);
+            this.label1.Location = new System.Drawing.Point(170, 76);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 16);
@@ -134,7 +134,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(327, 50);
+            this.textBox1.Location = new System.Drawing.Point(369, 73);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(413, 22);
@@ -217,7 +217,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(7, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(262, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 80;
             this.pictureBox1.TabStop = false;

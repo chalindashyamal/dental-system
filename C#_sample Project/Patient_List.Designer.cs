@@ -42,11 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.patienttableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dental_DBDataSet3 = new C__sample_Project.Dental_DBDataSet3();
-            this.patienttableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.patienttableTableAdapter = new C__sample_Project.Dental_DBDataSet3TableAdapters.patienttableTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,18 +50,23 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patienttableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dental_DBDataSet3 = new C__sample_Project.Dental_DBDataSet3();
+            this.patienttableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.patienttableTableAdapter = new C__sample_Project.Dental_DBDataSet3TableAdapters.patienttableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patienttableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patienttableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patienttableBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(274, 152);
+            this.button5.Location = new System.Drawing.Point(340, 161);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(140, 46);
@@ -78,7 +78,7 @@
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(547, 152);
+            this.button4.Location = new System.Drawing.Point(613, 161);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 46);
@@ -88,7 +88,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(767, 110);
+            this.button6.Location = new System.Drawing.Point(833, 119);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(140, 28);
@@ -99,7 +99,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(767, 75);
+            this.button7.Location = new System.Drawing.Point(833, 84);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(140, 28);
@@ -110,7 +110,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(767, 43);
+            this.button8.Location = new System.Drawing.Point(833, 52);
             this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(140, 28);
@@ -122,7 +122,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(128, 117);
+            this.label3.Location = new System.Drawing.Point(194, 126);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 16);
@@ -131,7 +131,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(274, 113);
+            this.textBox3.Location = new System.Drawing.Point(340, 122);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(413, 22);
@@ -140,7 +140,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 85);
+            this.label2.Location = new System.Drawing.Point(194, 94);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 16);
@@ -149,7 +149,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(274, 81);
+            this.textBox2.Location = new System.Drawing.Point(340, 90);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(413, 22);
@@ -158,7 +158,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 53);
+            this.label1.Location = new System.Drawing.Point(194, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 16);
@@ -167,7 +167,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 49);
+            this.textBox1.Location = new System.Drawing.Point(340, 58);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(413, 22);
@@ -197,34 +197,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1156, 312);
             this.dataGridView1.TabIndex = 65;
-            // 
-            // patienttableBindingSource
-            // 
-            this.patienttableBindingSource.DataMember = "patienttable";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 79;
-            this.pictureBox1.TabStop = false;
-            // 
-            // dental_DBDataSet3
-            // 
-            this.dental_DBDataSet3.DataSetName = "Dental_DBDataSet3";
-            this.dental_DBDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patienttableBindingSource1
-            // 
-            this.patienttableBindingSource1.DataMember = "patienttable";
-            this.patienttableBindingSource1.DataSource = this.dental_DBDataSet3;
-            // 
-            // patienttableTableAdapter
-            // 
-            this.patienttableTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -283,6 +255,34 @@
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
+            // patienttableBindingSource1
+            // 
+            this.patienttableBindingSource1.DataMember = "patienttable";
+            this.patienttableBindingSource1.DataSource = this.dental_DBDataSet3;
+            // 
+            // dental_DBDataSet3
+            // 
+            this.dental_DBDataSet3.DataSetName = "Dental_DBDataSet3";
+            this.dental_DBDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // patienttableBindingSource
+            // 
+            this.patienttableBindingSource.DataMember = "patienttable";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(262, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 79;
+            this.pictureBox1.TabStop = false;
+            // 
+            // patienttableTableAdapter
+            // 
+            this.patienttableTableAdapter.ClearBeforeFill = true;
+            // 
             // Patient_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -308,10 +308,10 @@
             this.Text = "Patient_List";
             this.Load += new System.EventHandler(this.Patient_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patienttableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patienttableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dental_DBDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patienttableBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
