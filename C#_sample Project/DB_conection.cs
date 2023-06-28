@@ -10,10 +10,9 @@ namespace C__sample_Project
 {
     internal class DB_conection
     {
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\NSBM\\1st year 3rd Semester\\C#\\dental-system\\C#_sample Project\\Dental_DB.mdf\";Integrated Security=True";
         public string GetConnectionString()
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\OneDrive\\Documents\\Projects\\C#_sample Project\\C#_sample Project\\Dental_DB.mdf\";Integrated Security=True";
-
             return connectionString;
         }
 
